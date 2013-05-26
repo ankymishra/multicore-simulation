@@ -1,0 +1,7 @@
+core3begin
+//Initial for polling
+A(0x25005000); W(0x12121212);
+
+A(0x25810038); R(0x0);
+A(0x2581003C); R(0x0);
+core3end

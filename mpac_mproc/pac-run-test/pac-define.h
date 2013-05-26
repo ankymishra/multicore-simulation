@@ -1,0 +1,1 @@
+#define PATTERN_DSPNUM	2

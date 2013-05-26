@@ -1,0 +1,12 @@
+c0_setting;c1_setting;c0_setting;c1_setting;
+c0_intra_c2cc;c1_intra_c2cc;c0_intra;c1_intra;
+c0_c1_2_c0_inter;c1_c1_2_c0_inter;c0_c1_2_c0_inter;c1_c1_2_c0_inter;
+c0_c0_2_c1_inter;c1_c0_2_c1_inter;c0_c0_2_c1_inter;c1_c0_2_c1_inter;
+c0_c0_rx_contention;c1_c0_rx_contention;c0_c0_rx_contention;c1_c0_rx_contention;
+c0_c1_rx_contention;c1_c1_rx_contention;c0_c1_rx_contention;c1_c1_rx_contention;
+c0_to_c1_int_msg_c0;c0_to_c1_int_msg_c1;c0_to_c1_int_msg_c0;c0_to_c1_int_msg_c1;
+c1_to_c0_int_msg_c0;c1_to_c0_int_msg_c1;c1_to_c0_int_msg_c0;c1_to_c0_int_msg_c1;
+;c1_wait_then_cancel;;c1_wait_then_cancel;
+c0_wait_then_cancel;;c0_wait_then_cancel;;
+;c1_wait_timeout;;c1_wait_timeout;
+c0_wait_timeout;;c0_wait_timeout;;

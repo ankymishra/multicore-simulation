@@ -1,0 +1,4 @@
+core1begin
+A(0x25810028); R(0x0);
+A(0x2581002C); R(0x0);
+core1end

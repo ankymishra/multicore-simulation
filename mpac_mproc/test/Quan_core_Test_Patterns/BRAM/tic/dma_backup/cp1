@@ -1,0 +1,6 @@
+cp dma_test_case8.tic.c   bram_dma_8.tic.c
+cp dma_test_case9.tic.c   bram_dma_9.tic.c
+cp dma_test_case10.tic.c  bram_dma_10.tic.c
+cp dma_test_case11.tic.c  bram_dma_11.tic.c
+cp dma_test_case12.tic.c  bram_dma_12.tic.c
+cp dma_test_case13.tic.c  bram_dma_13.tic.c

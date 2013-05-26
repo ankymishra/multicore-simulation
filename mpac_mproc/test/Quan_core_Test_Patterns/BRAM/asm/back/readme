@@ -1,0 +1,5 @@
+1.dma_bram_dr.s -> developmet case for reading.
+2.bram_dma_back : backup the deveolpment case.
+3.bram_dma_8.s ~ _13.s test cases for block ram
+
+

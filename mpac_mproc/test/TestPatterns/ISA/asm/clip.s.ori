@@ -1,0 +1,348 @@
+{  NOP  |  MOVI.L A0, 0x0000  |  MOVI AU_PSR, 0x0000000  |  NOP  |  NOP  }
+;Reg[A0] = 0x0000_0000
+
+{  NOP  |  MOVI.H A0, 0x2400  |  NOP  |  NOP  |  NOP  }
+;;=================CLIP=================================
+;;===========unsign sigle==================================
+{ NOP | MOVIU D0, 0x0000C000 | MOVIU D1, 0x00003000 | NOP | NOP }
+
+{ NOP | MOVIU D3, 0x0000A000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | CLIP D3, D0, D1 | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;00
+
+
+{ NOP | MOVIU D0, 0x0000C000 | MOVIU D1, 0x00003000 | NOP | NOP }
+
+{ NOP | MOVIU D3, 0x0000D000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | CLIP D3, D0, D1 | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;04
+
+{ NOP | MOVIU D0, 0x0000C000 | MOVIU D1, 0x00003000 | NOP | NOP }
+
+{ NOP | MOVIU D3, 0x00001000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | CLIP D3, D0, D1 | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;08
+;;=======================================================
+
+
+;;===========sign sigle==================================
+
+{ NOP | MOVIU D0, 0x0000C000 | MOVIU D1, 0x80000000 | NOP | NOP }
+
+{ NOP | MOVIU D3, 0x0000A000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | CLIP D3, D0, D1 | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;0c
+
+
+{ NOP | MOVI D0, 0x0000C000 | MOVI D1, 0x80000000 | NOP | NOP }
+
+{ NOP | MOVI D3, 0x80001111 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | CLIP D3, D0, D1 | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;10
+
+{ NOP | MOVI D0, 0x0000C000 | MOVI D1, 0x80000000 | NOP | NOP }
+
+{ NOP | MOVI D3, 0x0000F000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | CLIP D3, D0, D1 | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;14
+
+
+{ NOP | MOVI D0, 0x0000C000 | MOVI D1, 0xFFFFFFFF | NOP | NOP }
+
+{ NOP | MOVI D3, 0x80000000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | CLIP D3, D0, D1 | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;18
+;;=======================================================
+
+
+;;===========================CLIP.D======================
+{ NOP | MOVI D0, 0xA0006000 | MOVI D1, 0xD0000100 | NOP | NOP }
+
+{ NOP | MOVI D3, 0x80000001 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | CLIP.D D3, D0, D1 | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;1c
+
+
+{ NOP | MOVI D0, 0x0FFF6000 | MOVI D1, 0xFFFF0100 | NOP | NOP }
+
+{ NOP | MOVI D3, 0x8000A000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | CLIP.D D3, D0, D1 | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;20
+
+
+{ NOP | MOVI D0, 0x0666FF00 | MOVI D1, 0xF000FFF0 | NOP | NOP }
+
+{ NOP | MOVI D3, 0x07770777 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | CLIP.D D3, D0, D1 | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;24
+
+
+
+
+;;==============LS======================
+{  NOP  |  MOVI.L A0, 0x1000  |  MOVI AU_PSR, 0x0000000  |  NOP  |  NOP  }
+;Reg[A0] = 0x0000_0000
+
+{  NOP  |  MOVI.H A0, 0x2400  |  NOP  |  NOP  |  NOP  }
+;;=================CLIP=================================
+;;===========unsign sigle==================================
+{ NOP | MOVIU D0, 0x0000C000 | MOVIU D1, 0x00003000 | NOP | NOP }
+
+{ NOP | MOVIU D3, 0x0000A000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | CLIP D3, D0, D1 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;00
+
+
+{ NOP | MOVIU D0, 0x0000C000 | MOVIU D1, 0x00003000 | NOP | NOP }
+
+{ NOP | MOVIU D3, 0x0000D000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | CLIP D3, D0, D1 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;04
+
+{ NOP | MOVIU D0, 0x0000C000 | MOVIU D1, 0x00003000 | NOP | NOP }
+
+{ NOP | MOVIU D3, 0x00001000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | CLIP D3, D0, D1 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;08
+;;=======================================================
+
+
+;;===========sign sigle==================================
+
+{ NOP | MOVIU D0, 0x0000C000 | MOVIU D1, 0x80000000 | NOP | NOP }
+
+{ NOP | MOVIU D3, 0x0000A000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | CLIP D3, D0, D1 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;0c
+
+
+{ NOP | MOVI D0, 0x0000C000 | MOVI D1, 0x80000000 | NOP | NOP }
+
+{ NOP | MOVI D3, 0x80001111 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | CLIP D3, D0, D1 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;10
+
+{ NOP | MOVI D0, 0x0000C000 | MOVI D1, 0x80000000 | NOP | NOP }
+
+{ NOP | MOVI D3, 0x0000F000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | CLIP D3, D0, D1 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;14
+
+
+{ NOP | MOVI D0, 0x0000C000 | MOVI D1, 0xFFFFFFFF | NOP | NOP }
+
+{ NOP | MOVI D3, 0x80000000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | CLIP D3, D0, D1 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;18
+;;=======================================================
+
+
+;;===========================CLIP.D======================
+{ NOP | MOVI D0, 0xA0006000 | MOVI D1, 0xD0000100 | NOP | NOP }
+
+{ NOP | MOVI D3, 0x80000001 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | CLIP.D D3, D0, D1 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;1c
+
+
+{ NOP | MOVI D0, 0x0FFF6000 | MOVI D1, 0xFFFF0100 | NOP | NOP }
+
+{ NOP | MOVI D3, 0x8000A000 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | CLIP.D D3, D0, D1 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;20
+
+
+{ NOP | MOVI D0, 0x0666FF00 | MOVI D1, 0xF000FFF0 | NOP | NOP }
+
+{ NOP | MOVI D3, 0x07770777 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | CLIP.D D3, D0, D1 | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{  NOP  |  SW D3, A0, 4+    |  NOP  |  NOP  |  NOP  }
+;24
+
+
+
+
+
+{ NOP | NOP | NOP | NOP | NOP }
+
+{ TRAP | NOP | NOP | NOP | NOP }
+	

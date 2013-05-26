@@ -1,0 +1,154 @@
+{ NOP | MOVI.L A0, 0x0000 |  NOP  |  NOP  |  NOP  }
+{ NOP | MOVI.H A0, 0x2583 |  NOP  |  NOP  |  NOP  } ;SEMAPHORE Base
+
+{ NOP | MOVI.L A1, 0x0000 |  NOP  |  NOP  |  NOP  }
+{ NOP | MOVI.H A1, 0x2582 |  NOP  |  NOP  |  NOP  } ;M2 DMA Base
+
+{ NOP | MOVI.L A2, 0x0000 |  NOP  |  NOP  |  NOP  }
+{ NOP | MOVI.H A2, 0x2400 |  NOP  |  NOP  |  NOP  } ;L1 LDM Core0 Base = 0x0800_0000 (A2)
+
+{ NOP | MOVI.L A3, 0x0000 |  NOP  |  NOP  |  NOP  }
+{ NOP | MOVI.H A3, 0x2500 |  NOP  |  NOP  |  NOP  } ;M2 MEM
+
+{ NOP | MOVI.L D0, 0x0001 |  NOP  |  NOP  |  NOP  }
+{ NOP | MOVI.H D0, 0x0000 |  NOP  |  NOP  |  NOP  } ;Reg[D0] = 0x1
+
+WAITING_FLAG:
+{ NOP | LW  D8, A3, 0x0 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | SEQI D9, P1, P2, D8, 0x12345555 | NOP | NOP | NOP }
+{ (P2)B WAITING_FLAG | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+
+WAIT0_SMP:
+{ NOP | SH D0, A0, 0x02 | NOP | NOP | NOP } ;REQ SEMAPHORE0
+{ NOP | LH  D8, A0, 0x04 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | SEQI D9, P1, P2, D8, 0x1 | NOP | NOP | NOP }
+;{ (P2)B WAIT1_SMP | (P1)SW D8, A2, 0x0 | NOP | NOP | NOP }
+{ (P2)B WAIT0_SMP | (P1)SW D8, A2, 0x0 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+
+WAIT1_SMP:
+{ NOP | SH D0, A0, 0x12 | NOP | NOP | NOP } ;REQ SEMAPHORE0
+{ NOP | LH  D8, A0, 0x14 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | SEQI D9, P1, P2, D8, 0x1 | NOP | NOP | NOP }
+;{ (P2)B WAIT2_SMP | (P1)SW D8, A2, 0x4 | NOP | NOP | NOP }
+{ (P2)B WAIT1_SMP | (P1)SW D8, A2, 0x4 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+
+WAIT2_SMP:
+{ NOP | SH D0, A0, 0x22 | NOP | NOP | NOP } ;REQ SEMAPHORE0
+{ NOP | LH  D8, A0, 0x24 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | SEQI D9, P1, P2, D8, 0x1 | NOP | NOP | NOP }
+;{ (P2)B WAIT3_SMP | (P1)SW D8, A2, 0x8 | NOP | NOP | NOP }
+{ (P2)B WAIT2_SMP | (P1)SW D8, A2, 0x8 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+
+WAIT3_SMP:
+{ NOP | SH D0, A0, 0x32 | NOP | NOP | NOP } ;REQ SEMAPHORE0
+{ NOP | LH  D8, A0, 0x34 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | SEQI D9, P1, P2, D8, 0x1 | NOP | NOP | NOP }
+;{ (P2)B WAIT4_SMP | (P1)SW D8, A2, 0xC | NOP | NOP | NOP }
+{ (P2)B WAIT3_SMP | (P1)SW D8, A2, 0xC | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+
+WAIT4_SMP:
+{ NOP | SH D0, A0, 0x42 | NOP | NOP | NOP } ;REQ SEMAPHORE0
+{ NOP | LH  D8, A0, 0x44 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | SEQI D9, P1, P2, D8, 0x1 | NOP | NOP | NOP }
+;{ (P2)B WAIT5_SMP | (P1)SW D8, A2, 0x10 | NOP | NOP | NOP }
+{ (P2)B WAIT4_SMP | (P1)SW D8, A2, 0x10 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+
+WAIT5_SMP:
+{ NOP | SH D0, A0, 0x52 | NOP | NOP | NOP } ;REQ SEMAPHORE0
+{ NOP | LH  D8, A0, 0x54 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | SEQI D9, P1, P2, D8, 0x1 | NOP | NOP | NOP }
+;{ (P2)B WAIT6_SMP | (P1)SW D8, A2, 0x14 | NOP | NOP | NOP }
+{ (P2)B WAIT5_SMP | (P1)SW D8, A2, 0x14 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+
+WAIT6_SMP:
+{ NOP | SH D0, A0, 0x62 | NOP | NOP | NOP } ;REQ SEMAPHORE0
+{ NOP | LH  D8, A0, 0x64 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | SEQI D9, P1, P2, D8, 0x1 | NOP | NOP | NOP }
+;{ (P2)B WAIT7_SMP | (P1)SW D8, A2, 0x18 | NOP | NOP | NOP }
+{ (P2)B WAIT6_SMP | (P1)SW D8, A2, 0x18 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+
+WAIT7_SMP:
+{ NOP | SH D0, A0, 0x72 | NOP | NOP | NOP } ;REQ SEMAPHORE0
+{ NOP | LH  D8, A0, 0x74 | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | SEQI D9, P1, P2, D8, 0x1 | NOP | NOP | NOP }
+;{ (P2)B RELEASE_ALL | (P1)SW D8, A2, 0x1C | NOP | NOP | NOP }
+{ (P2)B WAIT7_SMP | (P1)SW D8, A2, 0x1C | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+
+RELEASE_ALL:
+{ NOP | SH D0, A0, 0x76 | NOP | NOP | NOP } ;RELEASE SEMAPHORE7
+{ NOP | SH D0, A0, 0x66 | NOP | NOP | NOP } ;RELEASE SEMAPHORE6
+{ NOP | SH D0, A0, 0x56 | NOP | NOP | NOP } ;RELEASE SEMAPHORE5
+{ NOP | SH D0, A0, 0x46 | NOP | NOP | NOP } ;RELEASE SEMAPHORE4
+{ NOP | SH D0, A0, 0x36 | NOP | NOP | NOP } ;RELEASE SEMAPHORE3
+{ NOP | SH D0, A0, 0x26 | NOP | NOP | NOP } ;RELEASE SEMAPHORE2
+{ NOP | SH D0, A0, 0x16 | NOP | NOP | NOP } ;RELEASE SEMAPHORE1
+{ NOP | SH D0, A0, 0x06 | NOP | NOP | NOP } ;RELEASE SEMAPHORE0
+
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ NOP | NOP | NOP | NOP | NOP }
+{ TRAP | NOP | NOP | NOP | NOP }

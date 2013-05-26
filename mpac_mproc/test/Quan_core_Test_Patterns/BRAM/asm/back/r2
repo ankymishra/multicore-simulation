@@ -1,0 +1,17 @@
+#cp ls_load_store/ls_load_store.tic.inst  ../inst/
+#cp  au_arithmetic/au_arithmetic.tic.inst ../inst/
+#cp  biu_timer/biu_timer.tic.inst  ../inst/
+#cp   dma_M1_M2/dma_M1_M2.tic.inst ../inst/
+#cp  dma_block_ram_burst/dma_block_ram_burst.tic.inst ../inst/
+#cp   dma_test_case11/dma_test_case11.tic.inst ../inst/
+#cp   dma_test_case8/dma_test_case8.tic.inst ../inst/
+#cp dma_block_ram_gather_scatter_onlyc0/dma_block_ram_gather_scatter_onlyc0.tic.inst  ../inst
+#cp   dma_test_case12/dma_test_case12.tic.inst ../inst/
+#cp   dma_test_case13/dma_test_case13.tic.inst ../inst/
+#cp   dma_test_case10/dma_test_case10.tic.inst ../inst/
+cp   dma_test_case10/dma_test_case10.tic.inst ../inst/
+#cp  bram_dma_11/bram_dma_11.tic.inst ../inst/
+#cp  bram_dma_13/bram_dma_13.tic.inst ../inst/
+#cp  bram_dma_9/bram_dma_9.tic.inst ../inst/
+echo "The copy is ok."
+

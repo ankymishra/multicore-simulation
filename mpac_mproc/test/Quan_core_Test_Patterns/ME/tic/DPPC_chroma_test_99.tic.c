@@ -1,0 +1,238 @@
+#include "header.h"
+#include "ticmacros.h"
+
+#define NO_Mask 0xFFFFFFFF /* 32 bits 1 */
+#define All_Mask 0x00000000
+
+int main()
+{
+
+
+
+  /* Initial DATA */
+  /* =================== */
+
+  /* Residual Cb */
+  A(0x25000000); W(0xfffffffb);
+
+  A(0x25000004); W(0xfffaffff);
+
+  A(0x25000008); W(0xfffefffa);
+
+  A(0x2500000c); W(0xfff6fff9);
+
+  A(0x25000010); W(0xfff6ffff);
+
+  A(0x25000014); W(0xfffcfffd);
+
+  A(0x25000018); W(0xfffaffff);
+
+  A(0x2500001c); W(0xfffffff8);
+
+  A(0x25000020); W(0xfff6fffb);
+
+  A(0x25000024); W(0xfffafffe);
+
+  A(0x25000028); W(0xfffafffb);
+
+  A(0x2500002c); W(0xfff8fff6);
+
+  A(0x25000030); W(0xfffcfffe);
+
+  A(0x25000034); W(0xfffbfffc);
+
+  A(0x25000038); W(0xfffcfffc);
+
+  A(0x2500003c); W(0xfff7fffc);
+
+  A(0x25000040); W(0xfffefffd);
+
+  A(0x25000044); W(0xfff7ffff);
+
+  A(0x25000048); W(0xfffcfffb);
+
+  A(0x2500004c); W(0xfffdfff6);
+
+  A(0x25000050); W(0xfff6fffa);
+
+  A(0x25000054); W(0xfffcfff7);
+
+  A(0x25000058); W(0xfff6fffc);
+
+  A(0x2500005c); W(0xfffefff7);
+
+  A(0x25000060); W(0xfffbfffe);
+
+  A(0x25000064); W(0xfffafff6);
+
+  A(0x25000068); W(0xfffbfffc);
+
+  A(0x2500006c); W(0xfffffff7);
+
+  A(0x25000070); W(0xfffffff6);
+
+  A(0x25000074); W(0xfff7fffc);
+
+  A(0x25000078); W(0xfffffff8);
+
+  A(0x2500007c); W(0xfffafffd);
+
+  /* Residual Cr */
+  A(0x25000080); W(0xfff6fff7);
+
+  A(0x25000084); W(0xfffefffe);
+
+  A(0x25000088); W(0xfffefff6);
+
+  A(0x2500008c); W(0xfff6fffe);
+
+  A(0x25000090); W(0xfffafff9);
+
+  A(0x25000094); W(0xfffdfff6);
+
+  A(0x25000098); W(0xfffefff7);
+
+  A(0x2500009c); W(0xfff6fffa);
+
+  A(0x250000a0); W(0xfffafff6);
+
+  A(0x250000a4); W(0xfffafffa);
+
+  A(0x250000a8); W(0xfff6fff8);
+
+  A(0x250000ac); W(0xfff6fffb);
+
+  A(0x250000b0); W(0xfffdfffa);
+
+  A(0x250000b4); W(0xfffbfffb);
+
+  A(0x250000b8); W(0xfff7fff7);
+
+  A(0x250000bc); W(0xfff7fffd);
+
+  A(0x250000c0); W(0xfffdfff9);
+
+  A(0x250000c4); W(0xfffcfff8);
+
+  A(0x250000c8); W(0xfffdfffb);
+
+  A(0x250000cc); W(0xfff6fffe);
+
+  A(0x250000d0); W(0xfff7fffa);
+
+  A(0x250000d4); W(0xfffffffb);
+
+  A(0x250000d8); W(0xfffafffa);
+
+  A(0x250000dc); W(0xfffefff9);
+
+  A(0x250000e0); W(0xfffefffc);
+
+  A(0x250000e4); W(0xfffdfffe);
+
+  A(0x250000e8); W(0xfffefff9);
+
+  A(0x250000ec); W(0xfffcfffa);
+
+  A(0x250000f0); W(0xfff7ffff);
+
+  A(0x250000f4); W(0xfffafffd);
+
+  A(0x250000f8); W(0xfff9fff9);
+
+  A(0x250000fc); W(0xfffbfffd);
+
+  /* PreColPelCb */
+  A(0x25000100); W(0x1414143c);
+
+  A(0x25000104); W(0x14141414);
+
+  A(0x25000108); W(0x00000014);
+
+  A(0x2500010c); W(0x00000000);
+
+  /* PreColPelCr */
+  A(0x25000110); W(0x1414143c);
+
+  A(0x25000114); W(0x14141414);
+
+  A(0x25000118); W(0x00000014);
+
+  A(0x2500011c); W(0x00000000);
+
+  /* PreRowPelCb */
+  A(0x25000120); W(0x0a0a0a0a);
+
+  A(0x25000124); W(0x0a0a0a0a);
+
+  /* PreRowPelCr */
+  A(0x25000128); W(0x0a0a0a0a);
+
+  A(0x2500012c); W(0x0a0a0a0a);
+
+  /* parameters setting */
+  A(0x25000130); W(0x00000a00);
+
+  A(0x25000134); W(0x02400200);
+
+  A(0x25000138); W(0xffffffff);
+
+  A(0x2500013c); W(0x01200100);
+
+  A(0x25000140); W(0x01280110);
+
+  A(0x25000144); W(0x00800000);
+
+  /* =================== */
+  /* End of initial DATA */
+
+
+  /* compare result */
+  /* Keep reading CBUSY for delaying the result check */
+  int i;
+
+  A(0x24050008);
+  for (i = 0; i <= 100; i++)
+    R(0x00000000,All_Mask);
+
+  /* Reconstruct Cb */
+  A(0x25000200); R(0x04090905,NO_Mask);
+  A(0x25000204); R(0x00030804,NO_Mask);
+  A(0x25000208); R(0x06070009,NO_Mask);
+  A(0x2500020c); R(0x09020409,NO_Mask);
+  A(0x25000210); R(0x04080005,NO_Mask);
+  A(0x25000214); R(0x02000405,NO_Mask);
+  A(0x25000218); R(0x05060608,NO_Mask);
+  A(0x2500021c); R(0x01060606,NO_Mask);
+  A(0x25000220); R(0x01090807,NO_Mask);
+  A(0x25000224); R(0x07000605,NO_Mask);
+  A(0x25000228); R(0x06010004,NO_Mask);
+  A(0x2500022c); R(0x08010006,NO_Mask);
+  A(0x25000230); R(0x04000508,NO_Mask);
+  A(0x25000234); R(0x09010506,NO_Mask);
+  A(0x25000238); R(0x01060900,NO_Mask);
+  A(0x2500023c); R(0x04070902,NO_Mask);
+  /* Reconstruct Cr */
+  A(0x25000240); R(0x08080001,NO_Mask);
+  A(0x25000244); R(0x00080800,NO_Mask);
+  A(0x25000248); R(0x07000403,NO_Mask);
+  A(0x2500024c); R(0x00040801,NO_Mask);
+  A(0x25000250); R(0x04040400,NO_Mask);
+  A(0x25000254); R(0x00050002,NO_Mask);
+  A(0x25000258); R(0x05050704,NO_Mask);
+  A(0x2500025c); R(0x01070101,NO_Mask);
+  A(0x25000260); R(0x06020703,NO_Mask);
+  A(0x25000264); R(0x00080705,NO_Mask);
+  A(0x25000268); R(0x09050104,NO_Mask);
+  A(0x2500026c); R(0x08030404,NO_Mask);
+  A(0x25000270); R(0x07080806,NO_Mask);
+  A(0x25000274); R(0x06040803,NO_Mask);
+  A(0x25000278); R(0x04070109,NO_Mask);
+  A(0x2500027c); R(0x05070303,NO_Mask);
+
+
+  E();
+
+  return 0;
+
+}

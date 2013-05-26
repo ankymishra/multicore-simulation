@@ -1,0 +1,88 @@
+
+/home/maxchang/6_spct6200/Quad_subsys_1209/fpga_sim/sim/simulation/regress/C2_M1_MEM/asm/c1_m1_mem_c2_bank0_rrrr.out:     file format elf32-pacdsp
+
+Disassembly of section .text:
+
+80000000 <POLLING_QUAD_CORE_READY-0x16>:
+80000000:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000002:	60 41 04 00 	moviu  r0,0x30000004	<4160 30000004>
+80000006:	00 30 
+80000008:	02 14       	{ SCALAR | nop | nop | nop | nop }
+8000000a:	48 43 01    	moviu  r1,0x1	<4348 01>
+8000000d:	02 14       	{ SCALAR | nop | nop | nop | nop }
+8000000f:	89 01 08    	(p0)sw  r1,r0,0x0000	<0189 08>
+80000012:	00 08       	{ nop | nop | nop | nop | nop }
+80000014:	00 08       	{ nop | nop | nop | nop | nop }
+
+80000016 <POLLING_QUAD_CORE_READY>:
+80000016:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000018:	60 41 00 00 	moviu  r0,0x30000000	<4160 30000000>
+8000001c:	00 30 
+8000001e:	02 10       	{ SCALAR | nop | nop | nop | nop }
+80000020:	40 03       	movi  r1,0x0	<0340>
+80000022:	02 10       	{ SCALAR | nop | nop | nop | nop }
+80000024:	40 05       	movi  r2,0x0	<0540>
+80000026:	02 10       	{ SCALAR | nop | nop | nop | nop }
+80000028:	40 07       	movi  r3,0x0	<0740>
+8000002a:	02 10       	{ SCALAR | nop | nop | nop | nop }
+8000002c:	40 09       	movi  r4,0x0	<0940>
+8000002e:	02 14       	{ SCALAR | nop | nop | nop | nop }
+80000030:	14 02 08    	(p0)lw  r1,r0,0x0000	<0214 08>
+80000033:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000035:	24 02 10 04 	(p0)lw  r2,r0,0x0004	<0224 0410>
+80000039:	02 18       	{ SCALAR | nop | nop | nop | nop }
+8000003b:	24 02 18 08 	(p0)lw  r3,r0,0x0008	<0224 0818>
+8000003f:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000041:	24 02 20 0c 	(p0)lw  r4,r0,0x000c	<0224 0c20>
+80000045:	00 08       	{ nop | nop | nop | nop | nop }
+80000047:	00 08       	{ nop | nop | nop | nop | nop }
+80000049:	02 14       	{ SCALAR | nop | nop | nop | nop }
+8000004b:	af 82 08    	and  r1,r1,r2	<82af 08>
+8000004e:	02 14       	{ SCALAR | nop | nop | nop | nop }
+80000050:	af 06 19    	and  r3,r3,r4	<06af 19>
+80000053:	02 14       	{ SCALAR | nop | nop | nop | nop }
+80000055:	af c2 08    	and  r1,r1,r3	<c2af 08>
+80000058:	02 1c       	{ SCALAR | nop | nop | nop | nop }
+8000005a:	3c 80 08 21 	(p0)seqi  r2,p1,p2,r1,0x1	<803c 012108>
+8000005e:	01 
+8000005f:	02 24       	{ SCALAR | nop | nop | nop | nop }
+80000061:	28 08 80 b7 	(p2)b  0xffffffb7	<0828 00ffffb780>
+80000065:	ff ff ff 
+80000068:	00 08       	{ nop | nop | nop | nop | nop }
+8000006a:	00 08       	{ nop | nop | nop | nop | nop }
+8000006c:	00 08       	{ nop | nop | nop | nop | nop }
+8000006e:	00 08       	{ nop | nop | nop | nop | nop }
+80000070:	00 08       	{ nop | nop | nop | nop | nop }
+80000072:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000074:	60 41 00 04 	moviu  r0,0x24200400	<4160 24200400>
+80000078:	20 24 
+8000007a:	02 20       	{ SCALAR | nop | nop | nop | nop }
+8000007c:	60 43 00 04 	moviu  r1,0x30010400	<4360 30010400>
+80000080:	01 30 
+80000082:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000084:	50 55 80 00 	moviu  r10,0x80	<5550 0080>
+
+80000088 <READ_C0_M1_BANK>:
+80000088:	02 18       	{ SCALAR | nop | nop | nop | nop }
+8000008a:	24 02 14 04 	(p0)lw  r2,r0,0x0004+	<0224 0414>
+8000008e:	00 08       	{ nop | nop | nop | nop | nop }
+80000090:	00 08       	{ nop | nop | nop | nop | nop }
+80000092:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000094:	91 43 10 04 	(p0)sw  r2,r1,0x0004+	<4391 0410>
+80000098:	00 08       	{ nop | nop | nop | nop | nop }
+8000009a:	00 08       	{ nop | nop | nop | nop | nop }
+8000009c:	02 24       	{ SCALAR | nop | nop | nop | nop }
+8000009e:	28 68 80 ec 	lbcb  0xffffffec	<6828 00ffffec80>
+800000a2:	ff ff ff 
+800000a5:	00 08       	{ nop | nop | nop | nop | nop }
+800000a7:	00 08       	{ nop | nop | nop | nop | nop }
+800000a9:	00 08       	{ nop | nop | nop | nop | nop }
+800000ab:	00 08       	{ nop | nop | nop | nop | nop }
+800000ad:	00 08       	{ nop | nop | nop | nop | nop }
+800000af:	00 08       	{ nop | nop | nop | nop | nop }
+800000b1:	00 08       	{ nop | nop | nop | nop | nop }
+800000b3:	00 08       	{ nop | nop | nop | nop | nop }
+800000b5:	00 08       	{ nop | nop | nop | nop | nop }
+800000b7:	00 08       	{ nop | nop | nop | nop | nop }
+800000b9:	ff 01       	{ trap | nop | nop | nop | nop }
+Disassembly of section .data:

@@ -1,0 +1,13 @@
+core3begin
+//Write data to 25005000 to polling.
+A(0x25005000); W(0x12121212);
+
+A(0x24350068); W(0x00000001,NO_Mask);
+A(0x24350070); W(0x73134934,NO_Mask);  
+A(0x24350078); W(0x28934163,NO_Mask);  
+
+//Verification;
+A(0x24300068); R(0x00000001);
+A(0x24300070); R(0x73134934); 
+A(0x24300078); R(0x28934163);
+ core3end

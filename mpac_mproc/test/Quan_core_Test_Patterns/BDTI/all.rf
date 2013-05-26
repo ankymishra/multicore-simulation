@@ -1,0 +1,13 @@
+bitupck;;;;bitupck;;;;
+vecadd;;;;vecadd;;;;
+viterbi;;;;viterbi;;;;
+iir;;;;iir;;;;
+cxfir;;;;cxfir;;;;
+vecmax;;;;vecmax;;;;
+ssfir_v1;;;;ssfir_v1;;;;
+ssfir_v2;;;;ssfir_v2;;;;
+vecdot;;;;vecdot;;;;
+vecdot_v1;;;;vecdot_v1;;;;
+vecdot_v2;;;;vecdot_v2;;;;
+bkfir;;;;bkfir;;;;
+lms;;;;lms;;;;

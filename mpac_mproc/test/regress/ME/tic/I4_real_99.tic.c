@@ -1,0 +1,399 @@
+#include "header.h"
+#include "ticmacros.h"
+
+#define NO_Mask 0xFFFFFFFF /* 32 bits 1 */
+#define All_Mask 0x00000000
+
+int main()
+{
+
+
+
+  /* Initial DATA */
+  /* =================== */
+
+  /* Residual Y */
+  /* raw data */
+  A(0x25000000); W(0x03020206);
+
+  A(0x25000004); W(0x07060404);
+
+  A(0x25000008); W(0x06000004);
+
+  A(0x2500000c); W(0x04040709);
+
+  A(0x25000010); W(0x07000004);
+
+  A(0x25000014); W(0x08010001);
+
+  A(0x25000018); W(0x07080501);
+
+  A(0x2500001c); W(0x01060003);
+
+  A(0x25000020); W(0x08040804);
+
+  A(0x25000024); W(0x09050002);
+
+  A(0x25000028); W(0x02050702);
+
+  A(0x2500002c); W(0x01080105);
+
+  A(0x25000030); W(0x04000803);
+
+  A(0x25000034); W(0x02040101);
+
+  A(0x25000038); W(0x02000209);
+
+  A(0x2500003c); W(0x09030605);
+
+  A(0x25000040); W(0x01080707);
+
+  A(0x25000044); W(0x04000500);
+
+  A(0x25000048); W(0x00060703);
+
+  A(0x2500004c); W(0x04030601);
+
+  A(0x25000050); W(0x06010305);
+
+  A(0x25000054); W(0x04000505);
+
+  A(0x25000058); W(0x07080000);
+
+  A(0x2500005c); W(0x06060109);
+
+  A(0x25000060); W(0x02070600);
+
+  A(0x25000064); W(0x07070002);
+
+  A(0x25000068); W(0x00090509);
+
+  A(0x2500006c); W(0x07050202);
+
+  A(0x25000070); W(0x02050805);
+
+  A(0x25000074); W(0x05080505);
+
+  A(0x25000078); W(0x07020608);
+
+  A(0x2500007c); W(0x02050109);
+
+  A(0x25000080); W(0x01040207);
+
+  A(0x25000084); W(0x04000104);
+
+  A(0x25000088); W(0x01040909);
+
+  A(0x2500008c); W(0x09000101);
+
+  A(0x25000090); W(0x05010509);
+
+  A(0x25000094); W(0x00020002);
+
+  A(0x25000098); W(0x08070708);
+
+  A(0x2500009c); W(0x07020208);
+
+  A(0x250000a0); W(0x03010607);
+
+  A(0x250000a4); W(0x09070100);
+
+  A(0x250000a8); W(0x04000401);
+
+  A(0x250000ac); W(0x07030207);
+
+  A(0x250000b0); W(0x09040507);
+
+  A(0x250000b4); W(0x05020807);
+
+  A(0x250000b8); W(0x05050105);
+
+  A(0x250000bc); W(0x03050706);
+
+  A(0x250000c0); W(0x06080606);
+
+  A(0x250000c4); W(0x00070607);
+
+  A(0x250000c8); W(0x09050902);
+
+  A(0x250000cc); W(0x00080801);
+
+  A(0x250000d0); W(0x02010205);
+
+  A(0x250000d4); W(0x08000301);
+
+  A(0x250000d8); W(0x01060505);
+
+  A(0x250000dc); W(0x03060105);
+
+  A(0x250000e0); W(0x08010409);
+
+  A(0x250000e4); W(0x04090802);
+
+  A(0x250000e8); W(0x08040407);
+
+  A(0x250000ec); W(0x00000204);
+
+  A(0x250000f0); W(0x00020107);
+
+  A(0x250000f4); W(0x02080205);
+
+  A(0x250000f8); W(0x05030600);
+
+  A(0x250000fc); W(0x08000109);
+
+  /* PreRowPelY */
+  A(0x25000100); W(0x0a0a0a0a);
+
+  A(0x25000104); W(0x0a0a0a0a);
+
+  A(0x25000108); W(0x0a0a0a0a);
+
+  A(0x2500010c); W(0x0a0a0a0a);
+
+  A(0x25000110); W(0x0a0a0a0a);
+
+  A(0x25000114); W(0x00000000);
+
+  /* PreColPelY */
+  A(0x25000118); W(0x14141414);
+
+  A(0x2500011c); W(0x14141414);
+
+  A(0x25000120); W(0x14141414);
+
+  A(0x25000124); W(0x10181414);
+
+  A(0x25000128); W(0x00000014);
+
+  A(0x2500012c); W(0x00000000);
+
+  /* parameters setting */
+  A(0x25000130); W(0x01400a00);
+
+  A(0x25000134); W(0x02380538);
+
+  A(0x25000138); W(0x01180338);
+
+  A(0x2500013c); W(0x00000100);
+
+  /* =================== */
+  /* End of initial DATA */
+
+
+  /* compare result */
+  /* Keep reading CBUSY for delaying the result check */
+  int i;
+
+  A(0x24050008);
+  for (i = 0; i <= 800; i++)
+    R(0x00000000,All_Mask);
+
+  /* Intra4x4PredMode */
+  A(0x25000140); R(0x06020800,NO_Mask);
+  A(0x25000144); R(0x04060808,NO_Mask);
+  A(0x25000148); R(0x03020607,NO_Mask);
+  A(0x2500014c); R(0x03030104,NO_Mask);
+  /* OutYReconstructed */
+  A(0x25000238); R(0x03020206,NO_Mask);
+  A(0x2500023c); R(0x07060404,NO_Mask);
+  A(0x25000240); R(0x06000004,NO_Mask);
+  A(0x25000244); R(0x04040709,NO_Mask);
+  A(0x25000248); R(0x07000004,NO_Mask);
+  A(0x2500024c); R(0x08010001,NO_Mask);
+  A(0x25000250); R(0x07080501,NO_Mask);
+  A(0x25000254); R(0x01060003,NO_Mask);
+  A(0x25000258); R(0x08040804,NO_Mask);
+  A(0x2500025c); R(0x09050002,NO_Mask);
+  A(0x25000260); R(0x02050702,NO_Mask);
+  A(0x25000264); R(0x01080105,NO_Mask);
+  A(0x25000268); R(0x04000803,NO_Mask);
+  A(0x2500026c); R(0x02040101,NO_Mask);
+  A(0x25000270); R(0x02000209,NO_Mask);
+  A(0x25000274); R(0x09030605,NO_Mask);
+  A(0x25000278); R(0x01080707,NO_Mask);
+  A(0x2500027c); R(0x04000500,NO_Mask);
+  A(0x25000280); R(0x00060703,NO_Mask);
+  A(0x25000284); R(0x04030601,NO_Mask);
+  A(0x25000288); R(0x06010305,NO_Mask);
+  A(0x2500028c); R(0x04000505,NO_Mask);
+  A(0x25000290); R(0x07080000,NO_Mask);
+  A(0x25000294); R(0x06060109,NO_Mask);
+  A(0x25000298); R(0x02070600,NO_Mask);
+  A(0x2500029c); R(0x07070002,NO_Mask);
+  A(0x250002a0); R(0x00090509,NO_Mask);
+  A(0x250002a4); R(0x07050202,NO_Mask);
+  A(0x250002a8); R(0x02050805,NO_Mask);
+  A(0x250002ac); R(0x05080505,NO_Mask);
+  A(0x250002b0); R(0x07020608,NO_Mask);
+  A(0x250002b4); R(0x02050109,NO_Mask);
+  A(0x250002b8); R(0x01040207,NO_Mask);
+  A(0x250002bc); R(0x04000104,NO_Mask);
+  A(0x250002c0); R(0x01040909,NO_Mask);
+  A(0x250002c4); R(0x09000101,NO_Mask);
+  A(0x250002c8); R(0x05010509,NO_Mask);
+  A(0x250002cc); R(0x00020002,NO_Mask);
+  A(0x250002d0); R(0x08070708,NO_Mask);
+  A(0x250002d4); R(0x07020208,NO_Mask);
+  A(0x250002d8); R(0x03010607,NO_Mask);
+  A(0x250002dc); R(0x09070100,NO_Mask);
+  A(0x250002e0); R(0x04000401,NO_Mask);
+  A(0x250002e4); R(0x07030207,NO_Mask);
+  A(0x250002e8); R(0x09040507,NO_Mask);
+  A(0x250002ec); R(0x05020807,NO_Mask);
+  A(0x250002f0); R(0x05050105,NO_Mask);
+  A(0x250002f4); R(0x03050706,NO_Mask);
+  A(0x250002f8); R(0x06080606,NO_Mask);
+  A(0x250002fc); R(0x00070607,NO_Mask);
+  A(0x25000300); R(0x09050902,NO_Mask);
+  A(0x25000304); R(0x00080801,NO_Mask);
+  A(0x25000308); R(0x02010205,NO_Mask);
+  A(0x2500030c); R(0x08000301,NO_Mask);
+  A(0x25000310); R(0x01060505,NO_Mask);
+  A(0x25000314); R(0x03060105,NO_Mask);
+  A(0x25000318); R(0x08010409,NO_Mask);
+  A(0x2500031c); R(0x04090802,NO_Mask);
+  A(0x25000320); R(0x08040407,NO_Mask);
+  A(0x25000324); R(0x00000204,NO_Mask);
+  A(0x25000328); R(0x00020107,NO_Mask);
+  A(0x2500032c); R(0x02080205,NO_Mask);
+  A(0x25000330); R(0x05030600,NO_Mask);
+  A(0x25000334); R(0x08000109,NO_Mask);
+  /* Residual */
+  A(0x25000338); R(0xfff8fffc,NO_Mask);
+  A(0x2500033c); R(0xfff9fff8,NO_Mask);
+  A(0x25000340); R(0xfffeffff,NO_Mask);
+  A(0x25000344); R(0x0000fffe,NO_Mask);
+  A(0x25000348); R(0xfff8fffc,NO_Mask);
+  A(0x2500034c); R(0xfffffff7,NO_Mask);
+  A(0x25000350); R(0x00010002,NO_Mask);
+  A(0x25000354); R(0x0001ffff,NO_Mask);
+  A(0x25000358); R(0xfff6fffa,NO_Mask);
+  A(0x2500035c); R(0xfffdfff6,NO_Mask);
+  A(0x25000360); R(0xfff9fff9,NO_Mask);
+  A(0x25000364); R(0x0003fffb,NO_Mask);
+  A(0x25000368); R(0xfffefff8,NO_Mask);
+  A(0x2500036c); R(0x00030002,NO_Mask);
+  A(0x25000370); R(0xfffdfffe,NO_Mask);
+  A(0x25000374); R(0xffff0004,NO_Mask);
+  A(0x25000378); R(0xfffefffa,NO_Mask);
+  A(0x2500037c); R(0xfffefffa,NO_Mask);
+  A(0x25000380); R(0xfffbfffc,NO_Mask);
+  A(0x25000384); R(0x00050001,NO_Mask);
+  A(0x25000388); R(0x0003fffc,NO_Mask);
+  A(0x2500038c); R(0x00000003,NO_Mask);
+  A(0x25000390); R(0xffff0003,NO_Mask);
+  A(0x25000394); R(0xffff0006,NO_Mask);
+  A(0x25000398); R(0xfffefff9,NO_Mask);
+  A(0x2500039c); R(0xfffafff6,NO_Mask);
+  A(0x250003a0); R(0xfffdfffd,NO_Mask);
+  A(0x250003a4); R(0xfffe0000,NO_Mask);
+  A(0x250003a8); R(0x00000007,NO_Mask);
+  A(0x250003ac); R(0x0000fffe,NO_Mask);
+  A(0x250003b0); R(0x00040003,NO_Mask);
+  A(0x250003b4); R(0x00070001,NO_Mask);
+  A(0x250003b8); R(0x00030003,NO_Mask);
+  A(0x250003bc); R(0xfffd0004,NO_Mask);
+  A(0x250003c0); R(0x0002fffd,NO_Mask);
+  A(0x250003c4); R(0x0002fffe,NO_Mask);
+  A(0x250003c8); R(0x00030000,NO_Mask);
+  A(0x250003cc); R(0xfffd0000,NO_Mask);
+  A(0x250003d0); R(0x0001ffff,NO_Mask);
+  A(0x250003d4); R(0xfffffffe,NO_Mask);
+  A(0x250003d8); R(0xffff0001,NO_Mask);
+  A(0x250003dc); R(0x0002fffd,NO_Mask);
+  A(0x250003e0); R(0x00020001,NO_Mask);
+  A(0x250003e4); R(0x0001fffd,NO_Mask);
+  A(0x250003e8); R(0xfffcfffc,NO_Mask);
+  A(0x250003ec); R(0x00030005,NO_Mask);
+  A(0x250003f0); R(0xffff0007,NO_Mask);
+  A(0x250003f4); R(0x00010001,NO_Mask);
+  A(0x250003f8); R(0x0002fffc,NO_Mask);
+  A(0x250003fc); R(0xfffe0003,NO_Mask);
+  A(0x25000400); R(0xfffcfffe,NO_Mask);
+  A(0x25000404); R(0x00040003,NO_Mask);
+  A(0x25000408); R(0x00000003,NO_Mask);
+  A(0x2500040c); R(0xfffc0005,NO_Mask);
+  A(0x25000410); R(0x0000fffe,NO_Mask);
+  A(0x25000414); R(0x00020003,NO_Mask);
+  A(0x25000418); R(0x00040001,NO_Mask);
+  A(0x2500041c); R(0xfffe0001,NO_Mask);
+  A(0x25000420); R(0x00020003,NO_Mask);
+  A(0x25000424); R(0x00010004,NO_Mask);
+  A(0x25000428); R(0x00000002,NO_Mask);
+  A(0x2500042c); R(0x0002fffc,NO_Mask);
+  A(0x25000430); R(0xfffd0005,NO_Mask);
+  A(0x25000434); R(0x00000003,NO_Mask);
+  A(0x25000438); R(0xfffb0000,NO_Mask);
+  A(0x2500043c); R(0xfffd0000,NO_Mask);
+  A(0x25000440); R(0xfffe0002,NO_Mask);
+  A(0x25000444); R(0xfffefffc,NO_Mask);
+  A(0x25000448); R(0x00020003,NO_Mask);
+  A(0x2500044c); R(0xfffdfffe,NO_Mask);
+  A(0x25000450); R(0x00000000,NO_Mask);
+  A(0x25000454); R(0x0008ffff,NO_Mask);
+  A(0x25000458); R(0x00000002,NO_Mask);
+  A(0x2500045c); R(0x0001fffd,NO_Mask);
+  A(0x25000460); R(0xfffeffff,NO_Mask);
+  A(0x25000464); R(0xfffd0000,NO_Mask);
+  A(0x25000468); R(0x00010005,NO_Mask);
+  A(0x2500046c); R(0x00020000,NO_Mask);
+  A(0x25000470); R(0xfffa0000,NO_Mask);
+  A(0x25000474); R(0xfffffffa,NO_Mask);
+  A(0x25000478); R(0x00020000,NO_Mask);
+  A(0x2500047c); R(0xfffefffd,NO_Mask);
+  A(0x25000480); R(0xfffdfffc,NO_Mask);
+  A(0x25000484); R(0x00070004,NO_Mask);
+  A(0x25000488); R(0x0001fffe,NO_Mask);
+  A(0x2500048c); R(0xfffdfffa,NO_Mask);
+  A(0x25000490); R(0xfffe0003,NO_Mask);
+  A(0x25000494); R(0x0003ffff,NO_Mask);
+  A(0x25000498); R(0x00010002,NO_Mask);
+  A(0x2500049c); R(0x00030000,NO_Mask);
+  A(0x250004a0); R(0x00030001,NO_Mask);
+  A(0x250004a4); R(0x0001fffe,NO_Mask);
+  A(0x250004a8); R(0xfffeffff,NO_Mask);
+  A(0x250004ac); R(0xffff0002,NO_Mask);
+  A(0x250004b0); R(0x00020001,NO_Mask);
+  A(0x250004b4); R(0xfffe0000,NO_Mask);
+  A(0x250004b8); R(0x00000000,NO_Mask);
+  A(0x250004bc); R(0x00000002,NO_Mask);
+  A(0x250004c0); R(0x00020001,NO_Mask);
+  A(0x250004c4); R(0xfffb0003,NO_Mask);
+  A(0x250004c8); R(0x0005ffff,NO_Mask);
+  A(0x250004cc); R(0x00030000,NO_Mask);
+  A(0x250004d0); R(0x0003fffb,NO_Mask);
+  A(0x250004d4); R(0xfffd0004,NO_Mask);
+  A(0x250004d8); R(0xfffcffff,NO_Mask);
+  A(0x250004dc); R(0xfffcfffb,NO_Mask);
+  A(0x250004e0); R(0xfffffffd,NO_Mask);
+  A(0x250004e4); R(0x0003fffb,NO_Mask);
+  A(0x250004e8); R(0x00000001,NO_Mask);
+  A(0x250004ec); R(0xfffb0000,NO_Mask);
+  A(0x250004f0); R(0xfffd0000,NO_Mask);
+  A(0x250004f4); R(0x00000003,NO_Mask);
+  A(0x250004f8); R(0xfffe0003,NO_Mask);
+  A(0x250004fc); R(0x0002fffb,NO_Mask);
+  A(0x25000500); R(0x0003fffe,NO_Mask);
+  A(0x25000504); R(0xffff0004,NO_Mask);
+  A(0x25000508); R(0xfffe0002,NO_Mask);
+  A(0x2500050c); R(0x0003fffe,NO_Mask);
+  A(0x25000510); R(0xffff0000,NO_Mask);
+  A(0x25000514); R(0xfffdfffd,NO_Mask);
+  A(0x25000518); R(0xfffb0001,NO_Mask);
+  A(0x2500051c); R(0xfffafffc,NO_Mask);
+  A(0x25000520); R(0xfffd0000,NO_Mask);
+  A(0x25000524); R(0xfffd0003,NO_Mask);
+  A(0x25000528); R(0x0000fffa,NO_Mask);
+  A(0x2500052c); R(0x0001fffe,NO_Mask);
+  A(0x25000530); R(0xfffe0006,NO_Mask);
+  A(0x25000534); R(0x0005fffd,NO_Mask);
+  /* SAD */
+  A(0x25000538); R(0x000002bc,NO_Mask);
+
+
+  E();
+
+  return 0;
+
+}

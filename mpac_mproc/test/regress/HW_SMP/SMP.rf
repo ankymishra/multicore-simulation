@@ -1,0 +1,6 @@
+hard_prot;;hard_prot;;
+soft_prot;;soft_prot;;
+hp_err;;hp_err;;
+sp_err;;sp_err;;
+c0_req;c1_req;c0_c1_req;c0_c1_req;
+Sema_Fsh_C1;Sema_Fsh_C2;Sema_Fsh_C1;Sema_Fsh_C2;

@@ -1,0 +1,18 @@
+#pacdsp-filer.sh ls_load_store 
+#pacdsp-filer.sh au_arithmetic
+#pacdsp-filer.sh biu_timer	
+#pacdsp-filer.sh dma_M1_M2
+#pacdsp-filer.sh dma_block_ram_burst
+#pacdsp-filer.sh dma_test_case12
+#pacdsp-filer.sh dma_test_case13
+#pacdsp-filer.sh dma_test_case8
+#pacdsp-filer.sh  dma_block_ram_gather_scatter_onlyc0
+#pacdsp-filer.sh dma_test_case10
+pacdsp-filer.sh bram_dma_13
+#pacdsp-filer.sh bram_dma_13
+#pacdsp-filer.sh bram_dma_9
+
+
+#pacdsp-filer.sh bram_dma_12
+#pacdsp-filer.sh bram_dma_10
+#pacdsp-filer.sh bram_dma_8

@@ -1,0 +1,9 @@
+sc_m2_mem;;sc_m2_mem;;
+m2_emau_nonaligned_ls;;m2_emau_nonaligned_ls;;
+m2_dma_contention_c0;m2_dma_contention_c1;m2_dma_contention_c0;m2_dma_contention_c1;
+m2_emau_contention_c0;m2_emau_contention_c1;m2_emau_contention_c0;m2_emau_contention_c1;
+m2_emau_no_contention_c0;m2_emau_no_contention_c1;m2_emau_no_contention_c0;m2_emau_no_contention_c1;
+M1_M2_DMA_Deadlock_test;;M1_M2_DMA_Deadlock_test;;
+m2_sdma_deadlock;;m2_sdma_deadlock;;
+all_dma_access_M2_C0;all_dma_access_M2_C1;all_dma_access_M2_C0;all_dma_access_M2_C1;
+M2_boundary;;M2_boundary;;

@@ -1,0 +1,402 @@
+
+/home/maxchang/6_spct6200/Quad_subsys_1209/fpga_sim/sim/simulation/regress/C2_M1_MEM/asm/c2_m1_mem_c2_bank0_wwww.out:     file format elf32-pacdsp
+
+Disassembly of section .text:
+
+80000000 <test_pattern>:
+80000000:	02 10       	{ SCALAR | nop | nop | nop | nop }
+80000002:	40 41       	moviu  r0,0x0	<4140>
+80000004:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000006:	60 43 00 00 	moviu  r1,0x24200000	<4360 24200000>
+8000000a:	20 24 
+8000000c:	02 18       	{ SCALAR | nop | nop | nop | nop }
+8000000e:	50 45 00 04 	moviu  r2,0x400	<4550 0400>
+
+80000012 <INI_M1_LOOP>:
+80000012:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000014:	91 43 00 04 	(p0)sw  r0,r1,0x0004+	<4391 0400>
+80000018:	02 24       	{ SCALAR | nop | nop | nop | nop }
+8000001a:	28 48 80 fa 	lbcb  0xfffffffa	<4828 00fffffa80>
+8000001e:	ff ff ff 
+80000021:	00 08       	{ nop | nop | nop | nop | nop }
+80000023:	00 08       	{ nop | nop | nop | nop | nop }
+80000025:	00 08       	{ nop | nop | nop | nop | nop }
+80000027:	00 08       	{ nop | nop | nop | nop | nop }
+80000029:	00 08       	{ nop | nop | nop | nop | nop }
+8000002b:	00 08       	{ nop | nop | nop | nop | nop }
+8000002d:	02 14       	{ SCALAR | nop | nop | nop | nop }
+8000002f:	48 41 06    	moviu  r0,0x6	<4148 06>
+80000032:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000034:	60 43 00 00 	moviu  r1,0x25000000	<4360 25000000>
+80000038:	00 25 
+8000003a:	02 18       	{ SCALAR | nop | nop | nop | nop }
+8000003c:	50 45 80 00 	moviu  r2,0x80	<4550 0080>
+
+80000040 <INI_M2_SubBank0_LOOP>:
+80000040:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000042:	91 43 00 04 	(p0)sw  r0,r1,0x0004+	<4391 0400>
+80000046:	02 24       	{ SCALAR | nop | nop | nop | nop }
+80000048:	28 48 80 fa 	lbcb  0xfffffffa	<4828 00fffffa80>
+8000004c:	ff ff ff 
+8000004f:	00 08       	{ nop | nop | nop | nop | nop }
+80000051:	00 08       	{ nop | nop | nop | nop | nop }
+80000053:	00 08       	{ nop | nop | nop | nop | nop }
+80000055:	00 08       	{ nop | nop | nop | nop | nop }
+80000057:	00 08       	{ nop | nop | nop | nop | nop }
+80000059:	00 08       	{ nop | nop | nop | nop | nop }
+8000005b:	02 14       	{ SCALAR | nop | nop | nop | nop }
+8000005d:	48 41 07    	moviu  r0,0x7	<4148 07>
+80000060:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000062:	60 43 00 02 	moviu  r1,0x25000200	<4360 25000200>
+80000066:	00 25 
+80000068:	02 18       	{ SCALAR | nop | nop | nop | nop }
+8000006a:	50 45 80 00 	moviu  r2,0x80	<4550 0080>
+
+8000006e <INI_M2_SubBank1_LOOP>:
+8000006e:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000070:	91 43 00 04 	(p0)sw  r0,r1,0x0004+	<4391 0400>
+80000074:	02 24       	{ SCALAR | nop | nop | nop | nop }
+80000076:	28 48 80 fa 	lbcb  0xfffffffa	<4828 00fffffa80>
+8000007a:	ff ff ff 
+8000007d:	00 08       	{ nop | nop | nop | nop | nop }
+8000007f:	00 08       	{ nop | nop | nop | nop | nop }
+80000081:	00 08       	{ nop | nop | nop | nop | nop }
+80000083:	00 08       	{ nop | nop | nop | nop | nop }
+80000085:	00 08       	{ nop | nop | nop | nop | nop }
+80000087:	00 08       	{ nop | nop | nop | nop | nop }
+80000089:	02 14       	{ SCALAR | nop | nop | nop | nop }
+8000008b:	48 41 01    	moviu  r0,0x1	<4148 01>
+8000008e:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000090:	60 43 00 00 	moviu  r1,0x30010000	<4360 30010000>
+80000094:	01 30 
+80000096:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000098:	50 45 80 00 	moviu  r2,0x80	<4550 0080>
+
+8000009c <INI_DDR_SubBank0_LOOP>:
+8000009c:	02 18       	{ SCALAR | nop | nop | nop | nop }
+8000009e:	91 43 00 04 	(p0)sw  r0,r1,0x0004+	<4391 0400>
+800000a2:	02 24       	{ SCALAR | nop | nop | nop | nop }
+800000a4:	28 48 80 fa 	lbcb  0xfffffffa	<4828 00fffffa80>
+800000a8:	ff ff ff 
+800000ab:	00 08       	{ nop | nop | nop | nop | nop }
+800000ad:	00 08       	{ nop | nop | nop | nop | nop }
+800000af:	00 08       	{ nop | nop | nop | nop | nop }
+800000b1:	00 08       	{ nop | nop | nop | nop | nop }
+800000b3:	00 08       	{ nop | nop | nop | nop | nop }
+800000b5:	00 08       	{ nop | nop | nop | nop | nop }
+800000b7:	02 14       	{ SCALAR | nop | nop | nop | nop }
+800000b9:	48 41 02    	moviu  r0,0x2	<4148 02>
+800000bc:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800000be:	60 43 00 02 	moviu  r1,0x30010200	<4360 30010200>
+800000c2:	01 30 
+800000c4:	02 18       	{ SCALAR | nop | nop | nop | nop }
+800000c6:	50 45 80 00 	moviu  r2,0x80	<4550 0080>
+
+800000ca <INI_DDR_SubBank1_LOOP>:
+800000ca:	02 18       	{ SCALAR | nop | nop | nop | nop }
+800000cc:	91 43 00 04 	(p0)sw  r0,r1,0x0004+	<4391 0400>
+800000d0:	02 24       	{ SCALAR | nop | nop | nop | nop }
+800000d2:	28 48 80 fa 	lbcb  0xfffffffa	<4828 00fffffa80>
+800000d6:	ff ff ff 
+800000d9:	00 08       	{ nop | nop | nop | nop | nop }
+800000db:	00 08       	{ nop | nop | nop | nop | nop }
+800000dd:	00 08       	{ nop | nop | nop | nop | nop }
+800000df:	00 08       	{ nop | nop | nop | nop | nop }
+800000e1:	00 08       	{ nop | nop | nop | nop | nop }
+800000e3:	00 08       	{ nop | nop | nop | nop | nop }
+800000e5:	02 14       	{ SCALAR | nop | nop | nop | nop }
+800000e7:	48 41 03    	moviu  r0,0x3	<4148 03>
+800000ea:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800000ec:	60 43 00 04 	moviu  r1,0x30010400	<4360 30010400>
+800000f0:	01 30 
+800000f2:	02 18       	{ SCALAR | nop | nop | nop | nop }
+800000f4:	50 45 80 00 	moviu  r2,0x80	<4550 0080>
+
+800000f8 <INI_DDR_SubBank2_LOOP>:
+800000f8:	02 18       	{ SCALAR | nop | nop | nop | nop }
+800000fa:	91 43 00 04 	(p0)sw  r0,r1,0x0004+	<4391 0400>
+800000fe:	02 24       	{ SCALAR | nop | nop | nop | nop }
+80000100:	28 48 80 fa 	lbcb  0xfffffffa	<4828 00fffffa80>
+80000104:	ff ff ff 
+80000107:	00 08       	{ nop | nop | nop | nop | nop }
+80000109:	00 08       	{ nop | nop | nop | nop | nop }
+8000010b:	00 08       	{ nop | nop | nop | nop | nop }
+8000010d:	00 08       	{ nop | nop | nop | nop | nop }
+8000010f:	00 08       	{ nop | nop | nop | nop | nop }
+80000111:	00 08       	{ nop | nop | nop | nop | nop }
+80000113:	02 14       	{ SCALAR | nop | nop | nop | nop }
+80000115:	48 41 04    	moviu  r0,0x4	<4148 04>
+80000118:	02 20       	{ SCALAR | nop | nop | nop | nop }
+8000011a:	60 43 00 06 	moviu  r1,0x30010600	<4360 30010600>
+8000011e:	01 30 
+80000120:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000122:	50 45 80 00 	moviu  r2,0x80	<4550 0080>
+
+80000126 <INI_DDR_SubBank3_LOOP>:
+80000126:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000128:	91 43 00 04 	(p0)sw  r0,r1,0x0004+	<4391 0400>
+8000012c:	02 24       	{ SCALAR | nop | nop | nop | nop }
+8000012e:	28 48 80 fa 	lbcb  0xfffffffa	<4828 00fffffa80>
+80000132:	ff ff ff 
+80000135:	00 08       	{ nop | nop | nop | nop | nop }
+80000137:	00 08       	{ nop | nop | nop | nop | nop }
+80000139:	00 08       	{ nop | nop | nop | nop | nop }
+8000013b:	00 08       	{ nop | nop | nop | nop | nop }
+8000013d:	00 08       	{ nop | nop | nop | nop | nop }
+8000013f:	00 08       	{ nop | nop | nop | nop | nop }
+80000141:	02 14       	{ SCALAR | nop | nop | nop | nop }
+80000143:	48 41 05    	moviu  r0,0x5	<4148 05>
+80000146:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000148:	60 43 00 08 	moviu  r1,0x30010800	<4360 30010800>
+8000014c:	01 30 
+8000014e:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000150:	50 45 80 00 	moviu  r2,0x80	<4550 0080>
+
+80000154 <INI_DDR_SubBank4_LOOP>:
+80000154:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000156:	91 43 00 04 	(p0)sw  r0,r1,0x0004+	<4391 0400>
+8000015a:	02 24       	{ SCALAR | nop | nop | nop | nop }
+8000015c:	28 48 80 fa 	lbcb  0xfffffffa	<4828 00fffffa80>
+80000160:	ff ff ff 
+80000163:	00 08       	{ nop | nop | nop | nop | nop }
+80000165:	00 08       	{ nop | nop | nop | nop | nop }
+80000167:	00 08       	{ nop | nop | nop | nop | nop }
+80000169:	00 08       	{ nop | nop | nop | nop | nop }
+8000016b:	00 08       	{ nop | nop | nop | nop | nop }
+8000016d:	00 08       	{ nop | nop | nop | nop | nop }
+8000016f:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000171:	60 41 70 c0 	moviu  r0,0x2425c070	<4160 2425c070>
+80000175:	25 24 
+80000177:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000179:	60 43 74 c0 	moviu  r1,0x2425c074	<4360 2425c074>
+8000017d:	25 24 
+8000017f:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000181:	60 45 80 c0 	moviu  r2,0x2425c080	<4560 2425c080>
+80000185:	25 24 
+80000187:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000189:	60 47 00 02 	moviu  r3,0x30010200	<4760 30010200>
+8000018d:	01 30 
+8000018f:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000191:	60 49 00 02 	moviu  r4,0x24200200	<4960 24200200>
+80000195:	20 24 
+80000197:	02 1c       	{ SCALAR | nop | nop | nop | nop }
+80000199:	58 4b 04 00 	moviu  r5,0x200004	<4b58 200004>
+8000019d:	20 
+8000019e:	02 14       	{ SCALAR | nop | nop | nop | nop }
+800001a0:	89 01 18    	(p0)sw  r3,r0,0x0000	<0189 18>
+800001a3:	02 14       	{ SCALAR | nop | nop | nop | nop }
+800001a5:	89 41 20    	(p0)sw  r4,r1,0x0000	<4189 20>
+800001a8:	02 14       	{ SCALAR | nop | nop | nop | nop }
+800001aa:	89 81 28    	(p0)sw  r5,r2,0x0000	<8189 28>
+800001ad:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800001af:	60 41 70 00 	moviu  r0,0x25820070	<4160 25820070>
+800001b3:	82 25 
+800001b5:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800001b7:	60 43 74 00 	moviu  r1,0x25820074	<4360 25820074>
+800001bb:	82 25 
+800001bd:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800001bf:	60 45 80 00 	moviu  r2,0x25820080	<4560 25820080>
+800001c3:	82 25 
+800001c5:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800001c7:	60 47 00 00 	moviu  r3,0x25000000	<4760 25000000>
+800001cb:	00 25 
+800001cd:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800001cf:	60 49 00 0a 	moviu  r4,0x24200a00	<4960 24200a00>
+800001d3:	20 24 
+800001d5:	02 1c       	{ SCALAR | nop | nop | nop | nop }
+800001d7:	58 4b 0c 00 	moviu  r5,0x20000c	<4b58 20000c>
+800001db:	20 
+800001dc:	02 14       	{ SCALAR | nop | nop | nop | nop }
+800001de:	89 01 18    	(p0)sw  r3,r0,0x0000	<0189 18>
+800001e1:	02 14       	{ SCALAR | nop | nop | nop | nop }
+800001e3:	89 41 20    	(p0)sw  r4,r1,0x0000	<4189 20>
+800001e6:	02 14       	{ SCALAR | nop | nop | nop | nop }
+800001e8:	89 81 28    	(p0)sw  r5,r2,0x0000	<8189 28>
+800001eb:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800001ed:	60 41 70 01 	moviu  r0,0x25820170	<4160 25820170>
+800001f1:	82 25 
+800001f3:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800001f5:	60 43 74 01 	moviu  r1,0x25820174	<4360 25820174>
+800001f9:	82 25 
+800001fb:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800001fd:	60 45 80 01 	moviu  r2,0x25820180	<4560 25820180>
+80000201:	82 25 
+80000203:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000205:	60 47 00 02 	moviu  r3,0x25000200	<4760 25000200>
+80000209:	00 25 
+8000020b:	02 20       	{ SCALAR | nop | nop | nop | nop }
+8000020d:	60 49 00 0c 	moviu  r4,0x24200c00	<4960 24200c00>
+80000211:	20 24 
+80000213:	02 1c       	{ SCALAR | nop | nop | nop | nop }
+80000215:	58 4b 0c 00 	moviu  r5,0x20000c	<4b58 20000c>
+80000219:	20 
+8000021a:	02 14       	{ SCALAR | nop | nop | nop | nop }
+8000021c:	89 01 18    	(p0)sw  r3,r0,0x0000	<0189 18>
+8000021f:	02 14       	{ SCALAR | nop | nop | nop | nop }
+80000221:	89 41 20    	(p0)sw  r4,r1,0x0000	<4189 20>
+80000224:	02 14       	{ SCALAR | nop | nop | nop | nop }
+80000226:	89 81 28    	(p0)sw  r5,r2,0x0000	<8189 28>
+80000229:	02 20       	{ SCALAR | nop | nop | nop | nop }
+8000022b:	60 41 08 00 	moviu  r0,0x30000008	<4160 30000008>
+8000022f:	00 30 
+80000231:	02 14       	{ SCALAR | nop | nop | nop | nop }
+80000233:	48 43 01    	moviu  r1,0x1	<4348 01>
+80000236:	02 14       	{ SCALAR | nop | nop | nop | nop }
+80000238:	89 01 08    	(p0)sw  r1,r0,0x0000	<0189 08>
+8000023b:	00 08       	{ nop | nop | nop | nop | nop }
+8000023d:	00 08       	{ nop | nop | nop | nop | nop }
+
+8000023f <POLLING_QUAD_CORE_READY>:
+8000023f:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000241:	60 41 00 00 	moviu  r0,0x30000000	<4160 30000000>
+80000245:	00 30 
+80000247:	02 10       	{ SCALAR | nop | nop | nop | nop }
+80000249:	40 03       	movi  r1,0x0	<0340>
+8000024b:	02 10       	{ SCALAR | nop | nop | nop | nop }
+8000024d:	40 05       	movi  r2,0x0	<0540>
+8000024f:	02 10       	{ SCALAR | nop | nop | nop | nop }
+80000251:	40 07       	movi  r3,0x0	<0740>
+80000253:	02 10       	{ SCALAR | nop | nop | nop | nop }
+80000255:	40 09       	movi  r4,0x0	<0940>
+80000257:	02 14       	{ SCALAR | nop | nop | nop | nop }
+80000259:	14 02 08    	(p0)lw  r1,r0,0x0000	<0214 08>
+8000025c:	02 18       	{ SCALAR | nop | nop | nop | nop }
+8000025e:	24 02 10 04 	(p0)lw  r2,r0,0x0004	<0224 0410>
+80000262:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000264:	24 02 18 08 	(p0)lw  r3,r0,0x0008	<0224 0818>
+80000268:	02 18       	{ SCALAR | nop | nop | nop | nop }
+8000026a:	24 02 20 0c 	(p0)lw  r4,r0,0x000c	<0224 0c20>
+8000026e:	00 08       	{ nop | nop | nop | nop | nop }
+80000270:	00 08       	{ nop | nop | nop | nop | nop }
+80000272:	02 14       	{ SCALAR | nop | nop | nop | nop }
+80000274:	af 82 08    	and  r1,r1,r2	<82af 08>
+80000277:	02 14       	{ SCALAR | nop | nop | nop | nop }
+80000279:	af 06 19    	and  r3,r3,r4	<06af 19>
+8000027c:	02 14       	{ SCALAR | nop | nop | nop | nop }
+8000027e:	af c2 08    	and  r1,r1,r3	<c2af 08>
+80000281:	02 1c       	{ SCALAR | nop | nop | nop | nop }
+80000283:	3c 80 08 21 	(p0)seqi  r2,p1,p2,r1,0x1	<803c 012108>
+80000287:	01 
+80000288:	02 24       	{ SCALAR | nop | nop | nop | nop }
+8000028a:	28 08 80 b7 	(p2)b  0xffffffb7	<0828 00ffffb780>
+8000028e:	ff ff ff 
+80000291:	00 08       	{ nop | nop | nop | nop | nop }
+80000293:	00 08       	{ nop | nop | nop | nop | nop }
+80000295:	00 08       	{ nop | nop | nop | nop | nop }
+80000297:	00 08       	{ nop | nop | nop | nop | nop }
+80000299:	00 08       	{ nop | nop | nop | nop | nop }
+8000029b:	02 14       	{ SCALAR | nop | nop | nop | nop }
+8000029d:	48 41 01    	moviu  r0,0x1	<4148 01>
+800002a0:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800002a2:	60 43 84 c0 	moviu  r1,0x2425c084	<4360 2425c084>
+800002a6:	25 24 
+800002a8:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800002aa:	60 45 84 00 	moviu  r2,0x25820084	<4560 25820084>
+800002ae:	82 25 
+800002b0:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800002b2:	60 47 84 01 	moviu  r3,0x25820184	<4760 25820184>
+800002b6:	82 25 
+800002b8:	02 14       	{ SCALAR | nop | nop | nop | nop }
+800002ba:	89 41 00    	(p0)sw  r0,r1,0x0000	<4189 00>
+800002bd:	02 14       	{ SCALAR | nop | nop | nop | nop }
+800002bf:	89 81 00    	(p0)sw  r0,r2,0x0000	<8189 00>
+800002c2:	02 14       	{ SCALAR | nop | nop | nop | nop }
+800002c4:	89 c1 00    	(p0)sw  r0,r3,0x0000	<c189 00>
+800002c7:	00 08       	{ nop | nop | nop | nop | nop }
+800002c9:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800002cb:	60 41 00 06 	moviu  r0,0x30010600	<4160 30010600>
+800002cf:	01 30 
+800002d1:	02 20       	{ SCALAR | nop | nop | nop | nop }
+800002d3:	60 43 00 06 	moviu  r1,0x24200600	<4360 24200600>
+800002d7:	20 24 
+800002d9:	02 18       	{ SCALAR | nop | nop | nop | nop }
+800002db:	50 55 80 00 	moviu  r10,0x80	<5550 0080>
+
+800002df <READ_C0_M1_BANK>:
+800002df:	02 18       	{ SCALAR | nop | nop | nop | nop }
+800002e1:	24 02 14 04 	(p0)lw  r2,r0,0x0004+	<0224 0414>
+800002e5:	00 08       	{ nop | nop | nop | nop | nop }
+800002e7:	00 08       	{ nop | nop | nop | nop | nop }
+800002e9:	02 18       	{ SCALAR | nop | nop | nop | nop }
+800002eb:	91 43 10 04 	(p0)sw  r2,r1,0x0004+	<4391 0410>
+800002ef:	02 24       	{ SCALAR | nop | nop | nop | nop }
+800002f1:	28 68 80 f0 	lbcb  0xfffffff0	<6828 00fffff080>
+800002f5:	ff ff ff 
+800002f8:	00 08       	{ nop | nop | nop | nop | nop }
+800002fa:	00 08       	{ nop | nop | nop | nop | nop }
+800002fc:	00 08       	{ nop | nop | nop | nop | nop }
+800002fe:	00 08       	{ nop | nop | nop | nop | nop }
+80000300:	00 08       	{ nop | nop | nop | nop | nop }
+
+80000302 <M1_DMA_STAT>:
+80000302:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000304:	60 41 54 c0 	moviu  r0,0x2425c054	<4160 2425c054>
+80000308:	25 24 
+8000030a:	02 14       	{ SCALAR | nop | nop | nop | nop }
+8000030c:	14 02 08    	(p0)lw  r1,r0,0x0000	<0214 08>
+8000030f:	00 08       	{ nop | nop | nop | nop | nop }
+80000311:	00 08       	{ nop | nop | nop | nop | nop }
+80000313:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000315:	15 41 08 0f 	(p0)andi  r1,r1,0xf	<4115 0f08>
+80000319:	02 18       	{ SCALAR | nop | nop | nop | nop }
+8000031b:	2c 82 08 21 	(p0)seqiu  r2,p1,p2,r1,0x0	<822c 2108>
+8000031f:	02 24       	{ SCALAR | nop | nop | nop | nop }
+80000321:	28 08 80 e3 	(p2)b  0xffffffe3	<0828 00ffffe380>
+80000325:	ff ff ff 
+80000328:	00 08       	{ nop | nop | nop | nop | nop }
+8000032a:	00 08       	{ nop | nop | nop | nop | nop }
+8000032c:	00 08       	{ nop | nop | nop | nop | nop }
+8000032e:	00 08       	{ nop | nop | nop | nop | nop }
+80000330:	00 08       	{ nop | nop | nop | nop | nop }
+
+80000332 <M2_DMA0_STAT>:
+80000332:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000334:	60 41 54 00 	moviu  r0,0x25820054	<4160 25820054>
+80000338:	82 25 
+8000033a:	02 14       	{ SCALAR | nop | nop | nop | nop }
+8000033c:	14 02 08    	(p0)lw  r1,r0,0x0000	<0214 08>
+8000033f:	00 08       	{ nop | nop | nop | nop | nop }
+80000341:	00 08       	{ nop | nop | nop | nop | nop }
+80000343:	02 18       	{ SCALAR | nop | nop | nop | nop }
+80000345:	15 41 08 0f 	(p0)andi  r1,r1,0xf	<4115 0f08>
+80000349:	02 1c       	{ SCALAR | nop | nop | nop | nop }
+8000034b:	3c 82 08 21 	(p0)seqiu  r2,p1,p2,r1,0x2	<823c 022108>
+8000034f:	02 
+80000350:	02 24       	{ SCALAR | nop | nop | nop | nop }
+80000352:	28 08 80 e2 	(p2)b  0xffffffe2	<0828 00ffffe280>
+80000356:	ff ff ff 
+80000359:	00 08       	{ nop | nop | nop | nop | nop }
+8000035b:	00 08       	{ nop | nop | nop | nop | nop }
+8000035d:	00 08       	{ nop | nop | nop | nop | nop }
+8000035f:	00 08       	{ nop | nop | nop | nop | nop }
+80000361:	00 08       	{ nop | nop | nop | nop | nop }
+
+80000363 <M2_DMA1_STAT>:
+80000363:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000365:	60 41 54 00 	moviu  r0,0x25820054	<4160 25820054>
+80000369:	82 25 
+8000036b:	02 14       	{ SCALAR | nop | nop | nop | nop }
+8000036d:	14 02 08    	(p0)lw  r1,r0,0x0000	<0214 08>
+80000370:	00 08       	{ nop | nop | nop | nop | nop }
+80000372:	00 08       	{ nop | nop | nop | nop | nop }
+80000374:	02 20       	{ SCALAR | nop | nop | nop | nop }
+80000376:	25 41 08 00 	(p0)andi  r1,r1,0xf0000	<4125 0f000008>
+8000037a:	00 0f 
+8000037c:	02 24       	{ SCALAR | nop | nop | nop | nop }
+8000037e:	5c 82 08 21 	(p0)seqiu  r2,p1,p2,r1,0x20000	<825c 0000002108>
+80000382:	00 00 02 
+80000385:	02 24       	{ SCALAR | nop | nop | nop | nop }
+80000387:	28 08 80 de 	(p2)b  0xffffffde	<0828 00ffffde80>
+8000038b:	ff ff ff 
+8000038e:	00 08       	{ nop | nop | nop | nop | nop }
+80000390:	00 08       	{ nop | nop | nop | nop | nop }
+80000392:	00 08       	{ nop | nop | nop | nop | nop }
+80000394:	00 08       	{ nop | nop | nop | nop | nop }
+80000396:	00 08       	{ nop | nop | nop | nop | nop }
+80000398:	00 08       	{ nop | nop | nop | nop | nop }
+8000039a:	00 08       	{ nop | nop | nop | nop | nop }
+8000039c:	ff 01       	{ trap | nop | nop | nop | nop }
+8000039e:	00 08       	{ nop | nop | nop | nop | nop }
+800003a0:	00 08       	{ nop | nop | nop | nop | nop }
+800003a2:	00 08       	{ nop | nop | nop | nop | nop }
+Disassembly of section .data:

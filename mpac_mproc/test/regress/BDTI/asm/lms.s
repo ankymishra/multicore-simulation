@@ -1,0 +1,65 @@
+
+BASE_ADDR = 0x2400
+ 
+;================================================================= 
+
+{	NOP         	|	MOVI.L A2,0x0280	  |	NOP   	|	MOVI.L A3,0x0070  	|	NOP	} ; add by JH
+{	MOVIU R0,256	|	MOVI.H A2,BASE_ADDR	|	CLR AC6	|	MOVI.H A3,BASE_ADDR	|	NOP	}
+
+{	NOP	|	LH D8,A2, 2+	|	MOVIU AC7,0X2666	|	LH D8,A3, 2+	|	NOP	}
+
+{	NOP	|	MOVI.L A0,0x0000  	|	NOP	|	NOP	|	NOP	} ; add by JH
+{	NOP	|	MOVI.H A0,BASE_ADDR	|	NOP	|	NOP	|	NOP	}
+
+{	NOP	|	MOVI.L A1,0x0048	  |	NOP	|	MOVI.L A1,0x0048	  |	NOP	}  ; add by JH
+{	NOP	|	MOVI.H A1,BASE_ADDR	|	NOP	|	MOVI.H A1,BASE_ADDR	|	NOP	}
+
+_BENCHMARK:										
+{	NOP	|	DLW D4,A0,8	|	DCLR AC0	|	SH D8,A1,0+	|	NOP	}
+{	NOP	|	DLW D6,A1,8	|	DCLR AC2	|	NOP	|	NOP	}
+{	NOP	|	DLW D0,A0,16+	|	COPY AC4,D8	|	NOP	|	NOP	}
+{	NOP	|	DLW D2,A1,16+	|	NOP	|	NOP	|	NOP	}
+{	NOP	|	DLW D8,A0,8+	|	XFMAC.D AC0,D4,D6	|	NOP	|	NOP	}
+{	NOP	|	DLW D10,A1,8+	|	XFMAC.D AC2,D5,D7	|	NOP	|	NOP	}
+{	NOP	|	DLW D12,A0,8+	|	XFMAC.D AC0,D0,D2	|	NOP	|	NOP	}
+{	NOP	|	DLW D14,A1,8+	|	XFMAC.D AC2,D1,D3	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	XFMAC.D AC0,D8,D10	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	XFMAC.D AC2,D9,D11	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	XFMAC.D AC0,D12,D14	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	XFMAC.D AC2,D13,D15	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	ADD AC0,AC0,AC1	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	ADD AC1,AC2,AC3	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	ADD AC0,AC0,AC1	|	NOP	|	NOP	}
+{	NOP	|	MOVI.L A1,0x004A	  |	NOP	|	NOP	|	NOP	} ; add by JH
+{	NOP	|	MOVI.H A1,BASE_ADDR	|	NOP	|	NOP	|	NOP	}
+{	NOP	|	DSNW D2,D3,A1,8+	|	SRAI AC0,AC0,16	|	NOP	|	NOP	}
+{	NOP	|	DSNW D6,D7,A1,8+	|	SUB.D AC6,AC4,AC0	|	NOP	|	NOP	}
+{	NOP	|	DSNW D10,D11,A1,8+	|	XMUL.D AC1,AC6,AC7	|	NOP	|	NOP	}
+{	NOP	|	DSNW D14,D15,A1,8+	|	PERMH2 AC1,AC1,AC1,0,0	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	XMAC.D D0,D2,AC1	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	XMAC.D D1,D3,AC1	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	XMAC.D D4,D6,AC1	|	NOP	|	NOP	}
+{	NOP	|	MOVI.L A0,0x0000	  |	NOP	             |	NOP	|	NOP	}   ; add by JH
+{	NOP	|	MOVI.H A0,BASE_ADDR	|	XMAC.D D5,D7,AC1	|	NOP	|	NOP	}
+{	NOP	|	DSW D0,D1,A0,8+	|	XMAC.D D8,D10,AC1	|	NOP	|	NOP	}
+{	NOP	|	DSW D4,D5,A0,8+	|	XMAC.D D9,D11,AC1	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	XMAC.D D12,D14,AC1	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	XMAC.D D13,D15,AC1	|	NOP	|	NOP	}
+{	NOP	|	DSW D8,D9,A0,8+	|	NOP	|	NOP	|	NOP	}
+{	NOP	|	DSW D12,D13,A0,8+	|	NOP	|	NOP	|	NOP	}
+TESTLOOP:										
+{	LBCB R0,_BENCHMARK	|	NOP	|	NOP	|	LH D8,A3, 2+	|	NOP	}
+{	NOP	|	LH D8,A2, 2+	|	NOP	|	NOP	|	NOP	}
+
+{	NOP	|	MOVI.L A0,0x0000	  |	NOP	|	NOP	|	NOP	} ; add by JH
+{	NOP	|	MOVI.H A0,BASE_ADDR	|	NOP	|	NOP	|	NOP	}
+
+{	NOP	|	MOVI.L A1,0x0048   	|	NOP	|	NOP	|	NOP	} ; add by JH
+{	NOP	|	MOVI.H A1,BASE_ADDR	|	NOP	|	NOP	|	NOP	}
+
+{	NOP	|	NOP	|	NOP	|	NOP	|	NOP	}
+{	NOP	|	NOP	|	NOP	|	NOP	|	NOP	}
+{ NOP | NOP | NOP | NOP | NOP }  
+{ NOP | NOP | NOP | NOP | NOP }
+
+{	TRAP	|	NOP	|	NOP	|	NOP	|	NOP	}

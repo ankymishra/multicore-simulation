@@ -1,0 +1,12 @@
+#ifndef MPAC_MPROC_DEFINE_H_INCLUDED
+#define MPAC_MPROC_DEFINE_H_INCLUDED
+
+#define C2CC
+#define DSPNUM	4
+//#define MPAC_DEBUG
+
+#define FILE_NAMESIZE	128
+#define PAGE_SIZE	4096
+#define PROT_BUFSIZE	(PAGE_SIZE - 128)
+
+#endif

@@ -1,0 +1,14 @@
+cp dma_test_case8.s.ori   bram_dma_8.s
+cp dma_test_case9.s.ori   bram_dma_9.s
+cp dma_test_case10.s.ori  bram_dma_10.s
+cp dma_test_case11.s.ori  bram_dma_11.s
+cp dma_test_case12.s.ori  bram_dma_12.s
+cp dma_test_case13.s.ori  bram_dma_13.s
+
+
+cp dma_test_case8.s    bram_dma_back
+cp dma_test_case9.s    bram_dma_back
+cp dma_test_case10.s   bram_dma_back
+cp dma_test_case11.s   bram_dma_back
+cp dma_test_case12.s   bram_dma_back
+cp dma_test_case13.s   bram_dma_back

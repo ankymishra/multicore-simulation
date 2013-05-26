@@ -1,0 +1,183 @@
+#ifndef SYS_DMA_DEF_H_INCLUDED
+#define SYS_DMA_DEF_H_INCLUDED
+
+#define SYS_DMASAR0	0x000
+#define SYS_DMADAR0	0x004
+#define SYS_DMASGR0	0x008
+#define SYS_DMADSR0	0x00c
+#define SYS_DMACTL0	0x010
+#define SYS_DMAEN0	0x014
+#define SYS_DMACLR0	0x018
+#define SYS_DMAFRC0	0x01c
+#define SYS_DMASFR0	0x020
+#define SYS_DMADFR0	0x024
+
+#define SYS_DMASAR1	0x030
+#define SYS_DMADAR1	0x034
+#define SYS_DMASGR1	0x038
+#define SYS_DMADSR1	0x03c
+#define SYS_DMACTL1	0x040
+#define SYS_DMAEN1	0x044
+#define SYS_DMACLR1	0x048
+#define SYS_DMAFRC1	0x04c
+#define SYS_DMASFR1	0x050
+#define SYS_DMADFR1	0x054
+
+#define SYS_DMASAR2	0x060
+#define SYS_DMADAR2	0x064
+#define SYS_DMASGR2	0x068
+#define SYS_DMADSR2	0x06c
+#define SYS_DMACTL2	0x070
+#define SYS_DMAEN2	0x074
+#define SYS_DMACLR2	0x078
+#define SYS_DMAFRC2	0x07c
+#define SYS_DMASFR2	0x080
+#define SYS_DMADFR2	0x084
+
+#define SYS_DMASAR3	0x090
+#define SYS_DMADAR3	0x094
+#define SYS_DMASGR3	0x098
+#define SYS_DMADSR3	0x09c
+#define SYS_DMACTL3	0x0a0
+#define SYS_DMAEN3	0x0a4
+#define SYS_DMACLR3	0x0a8
+#define SYS_DMAFRC3	0x0ac
+#define SYS_DMASFR3	0x0b0
+#define SYS_DMADFR3	0x0b4
+
+#define SYS_DMASAR4	0x0c0
+#define SYS_DMADAR4	0x0c4
+#define SYS_DMASGR4	0x0c8
+#define SYS_DMADSR4	0x0cc
+#define SYS_DMACTL4	0x0d0
+#define SYS_DMAEN4	0x0d4
+#define SYS_DMACLR4	0x0d8
+#define SYS_DMAFRC4	0x0dc
+#define SYS_DMASFR4	0x0e0
+#define SYS_DMADFR4	0x0e4
+
+#define SYS_DMASAR5	0x0f0
+#define SYS_DMADAR5	0x0f4
+#define SYS_DMASGR5	0x0f8
+#define SYS_DMADSR5	0x0fc
+#define SYS_DMACTL5	0x100
+#define SYS_DMAEN5	0x104
+#define SYS_DMACLR5	0x108
+#define SYS_DMAFRC5	0x10c
+#define SYS_DMASFR5	0x110
+#define SYS_DMADFR5	0x114
+
+#define SYS_DMASAR6	0x120
+#define SYS_DMADAR6	0x124
+#define SYS_DMASGR6	0x128
+#define SYS_DMADSR6	0x12c
+#define SYS_DMACTL6	0x130
+#define SYS_DMAEN6	0x134
+#define SYS_DMACLR6	0x138
+#define SYS_DMAFRC6	0x13c
+#define SYS_DMASFR6	0x140
+#define SYS_DMADFR6	0x144
+
+#define SYS_DMASAR7	0x150
+#define SYS_DMADAR7	0x154
+#define SYS_DMASGR7	0x158
+#define SYS_DMADSR7	0x15c
+#define SYS_DMACTL7	0x160
+#define SYS_DMAEN7	0x164
+#define SYS_DMACLR7	0x168
+#define SYS_DMAFRC7	0x16c
+#define SYS_DMASFR7	0x170
+#define SYS_DMADFR7	0x174
+
+#define SYS_DMASAR8	0x180
+#define SYS_DMADAR8	0x184
+#define SYS_DMASGR8	0x188
+#define SYS_DMADSR8	0x18c
+#define SYS_DMACTL8	0x190
+#define SYS_DMAEN8	0x194
+#define SYS_DMACLR8	0x198
+#define SYS_DMAFRC8	0x19c
+#define SYS_DMASFR8	0x1a0
+#define SYS_DMADFR8	0x1a4
+
+#define SYS_DMASAR9	0x1b0
+#define SYS_DMADAR9	0x1b4
+#define SYS_DMASGR9	0x1b8
+#define SYS_DMADSR9	0x1bc
+#define SYS_DMACTL9	0x1c0
+#define SYS_DMAEN9	0x1c4
+#define SYS_DMACLR9	0x1c8
+#define SYS_DMAFRC9	0x1cc
+#define SYS_DMASFR9	0x1d0
+#define SYS_DMADFR9	0x1d4
+
+#define SYS_DMASAR10	0x1e0
+#define SYS_DMADAR10	0x1e4
+#define SYS_DMASGR10	0x1e8
+#define SYS_DMADSR10	0x1ec
+#define SYS_DMACTL10	0x1f0
+#define SYS_DMAEN10	0x1f4
+#define SYS_DMACLR10	0x1f8
+#define SYS_DMAFRC10	0x1fc
+#define SYS_DMASFR10	0x200
+#define SYS_DMADFR10	0x204
+
+#define SYS_DMASAR11	0x210
+#define SYS_DMADAR11	0x214
+#define SYS_DMASGR11	0x218
+#define SYS_DMADSR11	0x21c
+#define SYS_DMACTL11	0x220
+#define SYS_DMAEN11	0x224
+#define SYS_DMACLR11	0x228
+#define SYS_DMAFRC11	0x22c
+#define SYS_DMASFR11	0x230
+#define SYS_DMADFR11	0x234
+
+#define SYS_DMASAR12	0x240
+#define SYS_DMADAR12	0x244
+#define SYS_DMASGR12	0x248
+#define SYS_DMADSR12	0x24c
+#define SYS_DMACTL12	0x250
+#define SYS_DMAEN12	0x254
+#define SYS_DMACLR12	0x258
+#define SYS_DMAFRC12	0x25c
+#define SYS_DMASFR12	0x260
+#define SYS_DMADFR12	0x264
+
+#define SYS_DMASAR13	0x270
+#define SYS_DMADAR13	0x274
+#define SYS_DMASGR13	0x278
+#define SYS_DMADSR13	0x27c
+#define SYS_DMACTL13	0x280
+#define SYS_DMAEN13	0x284
+#define SYS_DMACLR13	0x288
+#define SYS_DMAFRC13	0x28c
+#define SYS_DMASFR13	0x290
+#define SYS_DMADFR13	0x294
+
+#define SYS_DMASAR14	0x2a0
+#define SYS_DMADAR14	0x2a4
+#define SYS_DMASGR14	0x2a8
+#define SYS_DMADSR14	0x2ac
+#define SYS_DMACTL14	0x2b0
+#define SYS_DMAEN14	0x2b4
+#define SYS_DMACLR14	0x2b8
+#define SYS_DMAFRC14	0x2bc
+#define SYS_DMASFR14	0x2c0
+#define SYS_DMADFR14	0x2c4
+
+#define SYS_DMASAR15	0x2d0
+#define SYS_DMADAR15	0x2d4
+#define SYS_DMASGR15	0x2d8
+#define SYS_DMADSR15	0x2dc
+#define SYS_DMACTL15	0x2e0
+#define SYS_DMAEN15	0x2e4
+#define SYS_DMACLR15	0x2e8
+#define SYS_DMAFRC15	0x2ec
+#define SYS_DMASFR15	0x2f0
+#define SYS_DMADFR15	0x2f4
+
+#define SYS_DMABUSY	0x300
+#define SYS_DMATMN	0x304
+
+#endif

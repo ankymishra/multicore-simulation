@@ -1,0 +1,184 @@
+
+             SystemC 2.2.0 --- Apr 20 2010 10:28:21
+        Copyright (c) 1996-2006 by all Contributors
+                    ALL RIGHTS RESERVED
+
+Info: (I804) /IEEE_Std_1666/deprecated: sc_sensitive_pos is deprecated use sc_sensitive << with pos() instead
+
+Info: (I804) /IEEE_Std_1666/deprecated: sc_start(double) deprecated, use sc_start(sc_time) or sc_start()
+dsp_x0y1.pacdsp.pac_core: I am step3.
+dsp_x1y0.pacdsp.pac_core: I am step2.
+dsp_x0y0.pacdsp.pac_core: I am step1. &aux = 0x00430a24
+dsp_x0y1.pacdsp.pac_core: Processor Step3 up and running!
+dsp_x1y0.pacdsp.pac_core: Processor Step2 up and running!
+dsp_x0y0.pacdsp.pac_core: Processor Step1 up and running!
+dsp_x0y0.pacdsp.pac_core: 2:	INFO:	Found the SOI marker!
+dsp_x0y0.pacdsp.pac_core: 4:	INFO:	Skipping application data
+dsp_x0y0.pacdsp.pac_core: 6:	INFO:	Size is 16
+dsp_x0y0.pacdsp.pac_core: 10:	INFO:	Tag is JFIF
+dsp_x0y0.pacdsp.pac_core: 22:	INFO:	Skipping application data
+dsp_x0y0.pacdsp.pac_core: 24:	INFO:	Size is 17
+dsp_x0y0.pacdsp.pac_core: 28:	INFO:	Tag is Duck
+dsp_x0y0.pacdsp.pac_core: 41:	INFO:	Skipping application data
+dsp_x0y0.pacdsp.pac_core: 43:	INFO:	Size is 14
+dsp_x0y0.pacdsp.pac_core: 47:	INFO:	Tag is Adob
+dsp_x0y0.pacdsp.pac_core: 57:	INFO:	Defining Quantization Tables
+dsp_x0y0.pacdsp.pac_core: 	INFO:	Loading table 0
+dsp_x0y0.pacdsp.pac_core: 	INFO:	Loading table 1
+dsp_x0y0.pacdsp.pac_core: 191:	INFO:	Found the SOF marker!
+dsp_x0y0.pacdsp.pac_core: 	INFO:	Image size is 32 by 24
+dsp_x0y0.pacdsp.pac_core: 	INFO:	Color JPEG image!
+dsp_x0y0.pacdsp.pac_core: 	INFO:	comp[0].CID=1,.HS=1,.VS=1,.QT=0
+dsp_x0y0.pacdsp.pac_core: 	INFO:	comp[1].CID=2,.HS=1,.VS=1,.QT=1
+dsp_x0y0.pacdsp.pac_core: 	INFO:	comp[2].CID=3,.HS=1,.VS=1,.QT=1
+dsp_x0y0.pacdsp.pac_core: 	INFO:	Color format is 1:1:1, H=1
+dsp_x0y0.pacdsp.pac_core: 210:	INFO:	Defining Huffman Tables
+dsp_x0y0.pacdsp.pac_core: 334:	INFO:	Found the SOS marker!
+dsp_x0y1.pacdsp.pac_core: x_size=32, y_size=24
+dsp_x0y1.pacdsp.pac_core: All image properties have been received.
+dsp_x0y0.pacdsp.pac_core: 366:	INFO:	Sending a FBlock.
+dsp_x0y0.pacdsp.pac_core: 369:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 0... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 0... done.
+dsp_x0y0.pacdsp.pac_core: 372:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 1... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 1... done.
+dsp_x1y0.pacdsp.pac_core: Received block 2... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 2... done.
+dsp_x0y0.pacdsp.pac_core: 406:	INFO:	Sending a FBlock.
+dsp_x0y1.pacdsp.pac_core: Received MCU 0 (x,y=0,0), processing... done.
+dsp_x0y0.pacdsp.pac_core: 411:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 3... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 0... done.
+dsp_x0y0.pacdsp.pac_core: 416:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 4... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 1... done.
+dsp_x1y0.pacdsp.pac_core: Received block 5... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 2... done.
+dsp_x0y0.pacdsp.pac_core: 448:	INFO:	Sending a FBlock.
+dsp_x0y1.pacdsp.pac_core: Received MCU 1 (x,y=0,1), processing... done.
+dsp_x0y0.pacdsp.pac_core: 452:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 6... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 0... done.
+dsp_x0y0.pacdsp.pac_core: 458:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 7... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 1... done.
+dsp_x1y0.pacdsp.pac_core: Received block 8... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 2... done.
+dsp_x0y0.pacdsp.pac_core: 480:	INFO:	Sending a FBlock.
+dsp_x0y1.pacdsp.pac_core: Received MCU 2 (x,y=0,2), processing... done.
+dsp_x0y0.pacdsp.pac_core: 482:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 9... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 0... done.
+dsp_x0y0.pacdsp.pac_core: 484:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 10... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 1... done.
+dsp_x1y0.pacdsp.pac_core: Received block 11... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 2... done.
+dsp_x0y0.pacdsp.pac_core: 502:	INFO:	Sending a FBlock.
+dsp_x0y0.pacdsp.pac_core: 505:	INFO:	Sending a FBlock.
+dsp_x0y1.pacdsp.pac_core: Received MCU 3 (x,y=0,3), processing... done.
+dsp_x1y0.pacdsp.pac_core: Received block 12... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 0... done.
+dsp_x0y0.pacdsp.pac_core: 507:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 13... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 1... done.
+dsp_x1y0.pacdsp.pac_core: Received block 14... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 2... done.
+dsp_x0y0.pacdsp.pac_core: 548:	INFO:	Sending a FBlock.
+dsp_x0y1.pacdsp.pac_core: Received MCU 4 (x,y=0,4), processing... done.
+dsp_x0y0.pacdsp.pac_core: 555:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 15... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 0... done.
+dsp_x0y0.pacdsp.pac_core: 559:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 16... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 1... done.
+dsp_x1y0.pacdsp.pac_core: Received block 17... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 2... done.
+dsp_x0y0.pacdsp.pac_core: 595:	INFO:	Sending a FBlock.
+dsp_x0y1.pacdsp.pac_core: Received MCU 5 (x,y=1,1), processing... done.
+dsp_x0y0.pacdsp.pac_core: 599:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 18... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 0... done.
+dsp_x0y0.pacdsp.pac_core: 605:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 19... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 1... done.
+dsp_x1y0.pacdsp.pac_core: Received block 20... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 2... done.
+dsp_x0y0.pacdsp.pac_core: 627:	INFO:	Sending a FBlock.
+dsp_x0y0.pacdsp.pac_core: 628:	INFO:	Sending a FBlock.
+dsp_x0y1.pacdsp.pac_core: Received MCU 6 (x,y=1,2), processing... done.
+dsp_x1y0.pacdsp.pac_core: Received block 21... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 0... done.
+dsp_x0y0.pacdsp.pac_core: 630:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 22... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 1... done.
+dsp_x1y0.pacdsp.pac_core: Received block 23... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 2... done.
+dsp_x0y0.pacdsp.pac_core: 654:	INFO:	Sending a FBlock.
+dsp_x0y1.pacdsp.pac_core: Received MCU 7 (x,y=1,3), processing... done.
+dsp_x0y0.pacdsp.pac_core: 658:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 24... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 0... done.
+dsp_x0y0.pacdsp.pac_core: 661:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 25... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 1... done.
+dsp_x1y0.pacdsp.pac_core: Received block 26... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 2... done.
+dsp_x0y0.pacdsp.pac_core: 700:	INFO:	Sending a FBlock.
+dsp_x0y1.pacdsp.pac_core: Received MCU 8 (x,y=1,4), processing... done.
+dsp_x0y0.pacdsp.pac_core: 707:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 27... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 0... done.
+dsp_x0y0.pacdsp.pac_core: 712:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 28... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 1... done.
+dsp_x1y0.pacdsp.pac_core: Received block 29... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 2... done.
+dsp_x0y0.pacdsp.pac_core: 745:	INFO:	Sending a FBlock.
+dsp_x0y1.pacdsp.pac_core: Received MCU 9 (x,y=2,1), processing... done.
+dsp_x0y0.pacdsp.pac_core: 756:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 30... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 0... done.
+dsp_x0y0.pacdsp.pac_core: 763:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 31... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 1... done.
+dsp_x1y0.pacdsp.pac_core: Received block 32... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 2... done.
+dsp_x0y0.pacdsp.pac_core: 784:	INFO:	Sending a FBlock.
+dsp_x0y1.pacdsp.pac_core: Received MCU 10 (x,y=2,2), processing... done.
+dsp_x0y0.pacdsp.pac_core: 794:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 33... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 0... done.
+dsp_x0y0.pacdsp.pac_core: 801:	INFO:	Sending a FBlock.
+dsp_x1y0.pacdsp.pac_core: Received block 34... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 1... done.
+dsp_x0y0.pacdsp.pac_core: 803:	INFO:	Found the EOI marker!
+dsp_x0y0.pacdsp.pac_core: 
+dsp_x0y0.pacdsp.pac_core: step1 finished!
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x1y0.pacdsp.pac_core: Received block 35... IDCT performed... sent.
+dsp_x0y1.pacdsp.pac_core: Receiving block 2... done.
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x1y0.pacdsp.pac_core: All done!
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x1y0.pacdsp.pac_core: step2 finished.
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x1y0.pacdsp.pac_core: step2 running.
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x0y1.pacdsp.pac_core: Received MCU 11 (x,y=2,3), processing... done.
+dsp_x1y0.pacdsp.pac_core: step2 running.
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x0y1.pacdsp.pac_core: All done!
+dsp_x1y0.pacdsp.pac_core: step2 running.
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x0y1.pacdsp.pac_core: step3 finished.
+dsp_x1y0.pacdsp.pac_core: step2 running.
+dsp_x0y0.pacdsp.pac_core: step1 running.
+dsp_x0y1.pacdsp.pac_core: step3 running.
